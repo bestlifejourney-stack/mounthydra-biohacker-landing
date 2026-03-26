@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mount Hydra — Biohacker World Conference | Wholesale Secretome</title>
+  <meta name="description" content="Wholesale EV/Secretome for regenerative protocols. For clinics, wellness practices & practitioners. Conference pricing through April 4." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f172a;
+      --navy-light: #1e293b;
+      --navy-card: #162032;
+      --gold: #d4af37;
+      --gold-light: #e8c84a;
+      --gold-dim: #b8962e;
+      --white: #ffffff;
+      --gray: #94a3b8;
+      --gray-light: #cbd5e1;
+      --border: rgba(212, 175, 55, 0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--navy);
+      color: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-badge {
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 72px 24px 56px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(26px, 6vw, 44px);
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      font-size: 18px;
+      color: var(--gray-light);
+      margin-bottom: 36px;
+      line-height: 1.65;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .hero-note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--navy-light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .trust-bar-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+    .trust-buyers {
+      font-size: 13px;
+      color: var(--gray-light);
+    }
+    .trust-buyers strong { color: var(--gold); }
+    .trust-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    .trust-tag {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      color: var(--gray-light);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 700;
+      margin-bottom: 40px;
+      line-height: 1.3;
+    }
+
+    /* ── PRODUCT CARDS ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 600px) {
+      .products-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .product-card {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+    }
+    .product-tag {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 14px;
+    }
+    .product-name {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+    .product-conc {
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+    .product-packs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pack-badge {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--gray-light);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .product-price {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ── SCIENCE ── */
+    .science-section {
+      background: var(--navy-light);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .science-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 600px) {
+      .science-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .science-card {
+      background: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 20px;
+    }
+    .science-icon {
+      font-size: 28px;
+      margin-bottom: 14px;
+    }
+    .science-stat {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+    .science-desc {
+      font-size: 14px;
+      color: var(--gray-light);
+      line-height: 1.55;
+    }
+
+    /* ── FORM ── */
+    .form-section { background: var(--navy); }
+    .form-wrap {
+      background: var(--navy-light);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px 32px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .form-title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .form-subtitle {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 520px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+    .form-group {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+    label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+    input, select {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      color: var(--white);
+      font-size: 15px;
+      padding: 12px 14px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+    }
+    select option { background: var(--navy-light); color: var(--white); }
+    input:focus, select:focus { border-color: var(--gold); }
+    input::placeholder { color: var(--gray); }
+    .btn-form {
+      width: 100%;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 16px;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.02em;
+    }
+    .btn-form:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-form:active { transform: translateY(0); }
+    .form-privacy {
+      text-align: center;
+      font-size: 12px;
+      color: var(--gray);
+      margin-top: 14px;
+    }
+
+    /* ── THANK YOU ── */
+    #thank-you {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    #thank-you .ty-icon { font-size: 48px; margin-bottom: 16px; }
+    #thank-you h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; color: var(--gold); }
+    #thank-you p { font-size: 15px; color: var(--gray-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy-light);
+      border-top: 1px solid var(--border);
+      padding: 36px 24px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .footer-offer {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .footer-copy {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    .footer-copy a {
+      color: var(--gray-light);
+      text-decoration: none;
+    }
+    .footer-copy a:hover { color: var(--gold); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* ── SCROLL CTA ── */
+    .scroll-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 24px;
+      background: rgba(212, 175, 55, 0.05);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .scroll-cta span { font-size: 14px; color: var(--gray-light); }
+    .scroll-cta a {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .scroll-cta a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://mounthydra.us" class="nav-logo">Mount Hydra</a>
+  <span class="nav-badge">Biohacker World · Mar 28-29</span>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">🧬 Conference Exclusive — LA 2026</div>
+  <h1>Wholesale <span>EV/Secretome</span> for Regenerative Protocols</h1>
+  <p>For clinics, wellness practices & practitioners. US-shipped. Conference pricing through April 4.</p>
+  <a href="https://mounthydra.us/shop" class="btn-primary">Get Conference Pricing →</a>
+  <p class="hero-note">No commitment · Ships nationwide · Qualified professionals only</p>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <p class="trust-buyers"><strong>Current buyers:</strong> BioRegen · Stem Nova Network</p>
+    <div class="trust-tags">
+      <span class="trust-tag">🇺🇸 US-based</span>
+      <span class="trust-tag">📦 Ships nationwide</span>
+      <span class="trust-tag">🔬 Qualified professionals only</span>
+    </div>
+  </div>
+</div>
+
+<!-- SCROLL CTA STRIP -->
+<div class="scroll-cta">
+  <span>Capture leads below or</span>
+  <a href="https://mounthydra.us/shop">visit mounthydra.us/shop →</a>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section">
+  <div class="section-label">Product Portfolio</div>
+  <h2 class="section-title">Secretome Matrix+ Product Line</h2>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <span class="product-tag">Dermal</span>
+      <div class="product-name">Dermal Papillary Secretome Matrix+</div>
+      <div class="product-conc">148B concentration</div>
+      <div class="product-packs">
+        <span class="pack-badge">5 vials</span>
+        <span class="pack-badge">10 vials</span>
+        <span class="pack-badge">25 vials</span>
+      </div>
+      <div class="product-price">$350/vial — conference pricing</div>
+    </div>
+
+    <div class="product-card">
+      <span class="product-tag">Specialized</span>
+      <div class="product-name">Specialized Proprietary Secretome Matrix+</div>
+      <div class="product-conc">10B concentration</div>
+      <div class="product-packs">
+        <span class="pack-badge">5 vials</span>
+        <span class="pack-badge">10 vials</span>
+        <span class="pack-badge">25 vials</span>
+      </div>
+      <div class="product-price">$350/vial — conference pricing</div>
+    </div>
+
+    <div class="product-card">
+      <span class="product-tag">Core</span>
+      <div class="product-name">Secretome Matrix+</div>
+      <div class="product-conc">60B concentration</div>
+      <div class="product-packs">
+        <span class="pack-badge">5 vials</span>
+        <span class="pack-badge">10 vials</span>
+        <span class="pack-badge">25 vials</span>
+      </div>
+      <div class="product-price">$350/vial — conference pricing</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SCIENCE -->
+<section class="science-section">
+  <div class="section" style="padding-top:56px; padding-bottom:56px;">
+    <div class="section-label">The Science</div>
+    <h2 class="section-title">Clinical-Grade Biological Signaling</h2>
+    <div class="science-grid">
+
+      <div class="science-card">
+        <div class="science-icon">📈</div>
+        <div class="science-stat">38% vs 13%</div>
+        <div class="science-desc">Fibroblast survival in treated vs untreated samples — measurable cellular response.</div>
+      </div>
+
+      <div class="science-card">
+        <div class="science-icon">🔄</div>
+        <div class="science-stat">Dual-Phase</div>
+        <div class="science-desc">Core creates biological readiness. Shield converts it into measurable repair. Sequential synergy.</div>
+      </div>
+
+      <div class="science-card">
+        <div class="science-icon">⚡</div>
+        <div class="science-stat">Active Signal</div>
+        <div class="science-desc">Active biological signal modulator — not a passive antioxidant. Drives cellular communication.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FORM -->
+<section class="section form-section">
+  <div class="section-label">Get Pricing</div>
+  <h2 class="section-title" style="text-align:center;">Request Conference Pricing Sheet</h2>
+  <div class="form-wrap">
+
+    <div id="form-container">
+      <div class="form-title">Wholesale Access</div>
+      <p class="form-subtitle">Conference rates valid through April 4, 2026. Qualified practitioners only.</p>
+
+      <form id="lead-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name *</label>
+            <input type="text" id="fname" name="fname" placeholder="Dr. Sarah" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@clinic.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="practice">Business / Practice *</label>
+            <input type="text" id="practice" name="practice" placeholder="Renew Wellness Clinic" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="role">Your Role *</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select role…</option>
+              <option>Clinic owner</option>
+              <option>Practitioner</option>
+              <option>Wellness center</option>
+              <option>Biohacker</option>
+              <option>Distributor</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="volume">Monthly Vials Needed *</label>
+            <select id="volume" name="volume" required>
+              <option value="" disabled selected>Select volume…</option>
+              <option>1–5 vials/month</option>
+              <option>6–20 vials/month</option>
+              <option>21–50 vials/month</option>
+              <option>50+ vials/month</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-form">Get Conference Pricing Sheet →</button>
+        <p class="form-privacy">🔒 Your info is private. No spam, ever.</p>
+      </form>
+    </div>
+
+    <div id="thank-you">
+      <div class="ty-icon">✅</div>
+      <h3>You're on the list!</h3>
+      <p>We'll send your conference pricing sheet shortly.<br>Visit <a href="https://mounthydra.us/shop" style="color:var(--gold);">mounthydra.us/shop</a> to browse now.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Mount Hydra</div>
+  <div class="footer-offer">⏳ Conference offer ends April 4, 2026</div>
+  <div class="footer-copy">
+    © 2026 Mount Hydra Corp. For qualified professionals only.<br />
+    <a href="https://mounthydra.us">mounthydra.us</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('lead-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var fname = document.getElementById('fname').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var practice = document.getElementById('practice').value.trim();
+    var role = document.getElementById('role').value;
+    var volume = document.getElementById('volume').value;
+
+    if (!fname || !email || !practice || !role || !volume) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    // Store locally (optional — data visible in console for manual follow-up)
+    var lead = {
+      timestamp: new Date().toISOString(),
+      fname: fname,
+      email: email,
+      phone: document.getElementById('phone').value.trim(),
+      practice: practice,
+      role: role,
+      volume: volume,
+      source: 'Biohacker World 2026'
+    };
+    console.log('Lead captured:', JSON.stringify(lead, null, 2));
+
+    // Try to push to sessionStorage for reference
+    try {
+      var leads = JSON.parse(sessionStorage.getItem('mh_leads') || '[]');
+      leads.push(lead);
+      sessionStorage.setItem('mh_leads', JSON.stringify(leads));
+    } catch(err) {}
+
+    // Show thank you
+    document.getElementById('form-container').style.display = 'none';
+    document.getElementById('thank-you').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
