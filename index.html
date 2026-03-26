@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mount Hydra — Biohacker World Conference | Wholesale Secretome</title>
-  <meta name="description" content="Wholesale EV/Secretome for regenerative protocols. For clinics, wellness practices & practitioners. Conference pricing through April 4." />
+  <title>Mount Hydra — Biohacker World Conference | Professional Secretome</title>
+  <meta name="description" content="Professional-grade Secretome Matrix+ for regenerative protocols. For clinics, wellness practices & practitioners. Conference pricing through April 4." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -140,11 +140,6 @@
       gap: 10px;
       align-items: center;
     }
-    .trust-buyers {
-      font-size: 13px;
-      color: var(--gray-light);
-    }
-    .trust-buyers strong { color: var(--gold); }
     .trust-tags {
       display: flex;
       flex-wrap: wrap;
@@ -186,16 +181,16 @@
     .products-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 24px;
     }
     @media (min-width: 600px) {
-      .products-grid { grid-template-columns: repeat(3, 1fr); }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
     }
     .product-card {
       background: var(--navy-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 28px 24px;
+      padding: 32px 28px;
       position: relative;
       overflow: hidden;
     }
@@ -205,6 +200,9 @@
       top: 0; left: 0; right: 0;
       height: 3px;
       background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+    }
+    .product-card.featured {
+      border-color: var(--gold);
     }
     .product-tag {
       display: inline-block;
@@ -219,34 +217,35 @@
       margin-bottom: 14px;
     }
     .product-name {
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 700;
       line-height: 1.35;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       color: var(--white);
     }
-    .product-conc {
-      font-size: 13px;
-      color: var(--gray);
-      margin-bottom: 16px;
+    .product-desc {
+      font-size: 14px;
+      color: var(--gray-light);
+      margin-bottom: 18px;
+      line-height: 1.55;
     }
     .product-packs {
       display: flex;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
+      margin-bottom: 16px;
     }
     .pack-badge {
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.1);
       color: var(--gray-light);
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
-      padding: 4px 10px;
+      padding: 6px 14px;
       border-radius: 6px;
     }
     .product-price {
-      margin-top: 14px;
-      font-size: 13px;
+      font-size: 14px;
       color: var(--gold);
       font-weight: 600;
     }
@@ -286,6 +285,56 @@
       font-size: 14px;
       color: var(--gray-light);
       line-height: 1.55;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      background: var(--navy);
+    }
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 600px) {
+      .how-grid { grid-template-columns: 1fr auto 1fr; align-items: center; }
+    }
+    .how-step {
+      background: var(--navy-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .how-step-num {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+    .how-step h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .how-step p {
+      font-size: 14px;
+      color: var(--gray-light);
+      line-height: 1.5;
+    }
+    .how-arrow {
+      text-align: center;
+      font-size: 28px;
+      color: var(--gold);
+    }
+    @media (max-width: 599px) {
+      .how-arrow { transform: rotate(90deg); }
     }
 
     /* ── FORM ── */
@@ -424,26 +473,6 @@
       max-width: 900px;
       margin: 0 auto;
     }
-
-    /* ── SCROLL CTA ── */
-    .scroll-cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 18px 24px;
-      background: rgba(212, 175, 55, 0.05);
-      border-top: 1px solid var(--border);
-      text-align: center;
-    }
-    .scroll-cta span { font-size: 14px; color: var(--gray-light); }
-    .scroll-cta a {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--gold);
-      text-decoration: none;
-    }
-    .scroll-cta a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -451,78 +480,81 @@
 <!-- NAV -->
 <nav>
   <a href="https://mounthydra.us" class="nav-logo">Mount Hydra</a>
-  <span class="nav-badge">Biohacker World · Mar 28-29</span>
+  <span class="nav-badge">Biohacker World · Mar 28–29</span>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-eyebrow">🧬 Conference Exclusive — LA 2026</div>
-  <h1>Wholesale <span>EV/Secretome</span> for Regenerative Protocols</h1>
-  <p>For clinics, wellness practices & practitioners. US-shipped. Conference pricing through April 4.</p>
-  <a href="https://mounthydra.us/shop" class="btn-primary">Get Conference Pricing →</a>
+  <h1>Professional-Grade <span>Secretome Matrix+</span> for Regenerative Protocols</h1>
+  <p>For dermatologists, estheticians, clinics & wellness practitioners. US-manufactured. Conference pricing through April 4.</p>
+  <a href="#get-pricing" class="btn-primary">Get Conference Pricing →</a>
   <p class="hero-note">No commitment · Ships nationwide · Qualified professionals only</p>
 </section>
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-bar-inner">
-    <p class="trust-buyers"><strong>Current buyers:</strong> BioRegen · Stem Nova Network</p>
     <div class="trust-tags">
-      <span class="trust-tag">🇺🇸 US-based</span>
+      <span class="trust-tag">🇺🇸 US-manufactured</span>
+      <span class="trust-tag">🔬 3D bioreactor produced</span>
       <span class="trust-tag">📦 Ships nationwide</span>
-      <span class="trust-tag">🔬 Qualified professionals only</span>
+      <span class="trust-tag">👨‍⚕️ Qualified professionals only</span>
     </div>
   </div>
 </div>
 
-<!-- SCROLL CTA STRIP -->
-<div class="scroll-cta">
-  <span>Capture leads below or</span>
-  <a href="https://mounthydra.us/shop">visit mounthydra.us/shop →</a>
-</div>
-
 <!-- PRODUCTS -->
 <section class="section">
-  <div class="section-label">Product Portfolio</div>
-  <h2 class="section-title">Secretome Matrix+ Product Line</h2>
+  <div class="section-label">Products</div>
+  <h2 class="section-title">Two Products. One Sequential Protocol.</h2>
   <div class="products-grid">
 
     <div class="product-card">
-      <span class="product-tag">Dermal</span>
-      <div class="product-name">Dermal Papillary Secretome Matrix+</div>
-      <div class="product-conc">148B concentration</div>
+      <span class="product-tag">Step 1</span>
+      <div class="product-name">Core</div>
+      <div class="product-desc">Active biological signal modulator. Bioactive growth factor complex from 3D bioreactor conditioned medium. Reactivates cellular stress response and drives biological readiness.</div>
       <div class="product-packs">
+        <span class="pack-badge">3 vials</span>
         <span class="pack-badge">5 vials</span>
         <span class="pack-badge">10 vials</span>
-        <span class="pack-badge">25 vials</span>
       </div>
-      <div class="product-price">$350/vial — conference pricing</div>
+      <div class="product-price">Conference pricing — inquire below</div>
     </div>
 
-    <div class="product-card">
-      <span class="product-tag">Specialized</span>
-      <div class="product-name">Specialized Proprietary Secretome Matrix+</div>
-      <div class="product-conc">10B concentration</div>
+    <div class="product-card featured">
+      <span class="product-tag">Step 1 + 2</span>
+      <div class="product-name">Core + Shield</div>
+      <div class="product-desc">The complete sequential protocol. Core creates biological readiness. Shield — with PDRN, Hyaluronic Acid & GHK-Cu — converts it into measurable repair. Maximum clinical outcome.</div>
       <div class="product-packs">
-        <span class="pack-badge">5 vials</span>
-        <span class="pack-badge">10 vials</span>
-        <span class="pack-badge">25 vials</span>
+        <span class="pack-badge">3 sets</span>
+        <span class="pack-badge">5 sets</span>
+        <span class="pack-badge">10 sets</span>
       </div>
-      <div class="product-price">$350/vial — conference pricing</div>
+      <div class="product-price">Conference pricing — inquire below</div>
     </div>
 
-    <div class="product-card">
-      <span class="product-tag">Core</span>
-      <div class="product-name">Secretome Matrix+</div>
-      <div class="product-conc">60B concentration</div>
-      <div class="product-packs">
-        <span class="pack-badge">5 vials</span>
-        <span class="pack-badge">10 vials</span>
-        <span class="pack-badge">25 vials</span>
-      </div>
-      <div class="product-price">$350/vial — conference pricing</div>
-    </div>
+  </div>
+</section>
 
+<div class="divider"></div>
+
+<!-- HOW IT WORKS -->
+<section class="section how-section">
+  <div class="section-label">The Protocol</div>
+  <h2 class="section-title">How Core + Shield Works</h2>
+  <div class="how-grid">
+    <div class="how-step">
+      <div class="how-step-num">1</div>
+      <h3>Core</h3>
+      <p>Creates biological readiness. Reactivates the cellular stress response through active signaling — not passive antioxidant activity.</p>
+    </div>
+    <div class="how-arrow">→</div>
+    <div class="how-step">
+      <div class="how-step-num">2</div>
+      <h3>Shield</h3>
+      <p>Converts readiness into measurable repair. PDRN rebuilds tissue, HA restores the extracellular matrix, GHK-Cu activates gene-level repair.</p>
+    </div>
   </div>
 </section>
 
@@ -538,19 +570,19 @@
       <div class="science-card">
         <div class="science-icon">📈</div>
         <div class="science-stat">38% vs 13%</div>
-        <div class="science-desc">Fibroblast survival in treated vs untreated samples — measurable cellular response.</div>
+        <div class="science-desc">Fibroblast survival in treated vs untreated samples — measurable cellular response confirmed in testing.</div>
       </div>
 
       <div class="science-card">
-        <div class="science-icon">🔄</div>
-        <div class="science-stat">Dual-Phase</div>
-        <div class="science-desc">Core creates biological readiness. Shield converts it into measurable repair. Sequential synergy.</div>
+        <div class="science-icon">🔬</div>
+        <div class="science-stat">IL-6 Restored</div>
+        <div class="science-desc">Adaptive signaling restored. IL-8 non-irritating — zero induction in keratinocytes. Clean biological profile.</div>
       </div>
 
       <div class="science-card">
         <div class="science-icon">⚡</div>
         <div class="science-stat">Active Signal</div>
-        <div class="science-desc">Active biological signal modulator — not a passive antioxidant. Drives cellular communication.</div>
+        <div class="science-desc">Active biological signal modulator — not a passive antioxidant. Drives cellular communication at the source.</div>
       </div>
 
     </div>
@@ -560,20 +592,20 @@
 <div class="divider"></div>
 
 <!-- FORM -->
-<section class="section form-section">
+<section class="section form-section" id="get-pricing">
   <div class="section-label">Get Pricing</div>
-  <h2 class="section-title" style="text-align:center;">Request Conference Pricing Sheet</h2>
+  <h2 class="section-title" style="text-align:center;">Request Conference Pricing</h2>
   <div class="form-wrap">
 
     <div id="form-container">
-      <div class="form-title">Wholesale Access</div>
-      <p class="form-subtitle">Conference rates valid through April 4, 2026. Qualified practitioners only.</p>
+      <div class="form-title">Conference Access</div>
+      <p class="form-subtitle">Special rates valid through April 4, 2026. For qualified practitioners only.</p>
 
       <form id="lead-form" novalidate>
         <div class="form-row">
           <div class="form-group">
-            <label for="fname">First Name *</label>
-            <input type="text" id="fname" name="fname" placeholder="Dr. Sarah" required />
+            <label for="fname">Name *</label>
+            <input type="text" id="fname" name="fname" placeholder="Dr. Sarah Chen" required />
           </div>
           <div class="form-group">
             <label for="email">Email *</label>
@@ -583,7 +615,7 @@
 
         <div class="form-row">
           <div class="form-group">
-            <label for="phone">Phone (optional)</label>
+            <label for="phone">Phone</label>
             <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
           </div>
           <div class="form-group">
@@ -597,27 +629,27 @@
             <label for="role">Your Role *</label>
             <select id="role" name="role" required>
               <option value="" disabled selected>Select role…</option>
-              <option>Clinic owner</option>
+              <option>Dermatologist</option>
+              <option>Esthetician</option>
+              <option>Clinic Owner</option>
               <option>Practitioner</option>
-              <option>Wellness center</option>
-              <option>Biohacker</option>
+              <option>Wellness Center</option>
               <option>Distributor</option>
               <option>Other</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="volume">Monthly Vials Needed *</label>
-            <select id="volume" name="volume" required>
-              <option value="" disabled selected>Select volume…</option>
-              <option>1–5 vials/month</option>
-              <option>6–20 vials/month</option>
-              <option>21–50 vials/month</option>
-              <option>50+ vials/month</option>
+            <label for="interest">Interested In *</label>
+            <select id="interest" name="interest" required>
+              <option value="" disabled selected>Select product…</option>
+              <option>Core only</option>
+              <option>Core + Shield</option>
+              <option>Both — want to compare</option>
             </select>
           </div>
         </div>
 
-        <button type="submit" class="btn-form">Get Conference Pricing Sheet →</button>
+        <button type="submit" class="btn-form">Request Pricing Sheet →</button>
         <p class="form-privacy">🔒 Your info is private. No spam, ever.</p>
       </form>
     </div>
@@ -625,7 +657,7 @@
     <div id="thank-you">
       <div class="ty-icon">✅</div>
       <h3>You're on the list!</h3>
-      <p>We'll send your conference pricing sheet shortly.<br>Visit <a href="https://mounthydra.us/shop" style="color:var(--gold);">mounthydra.us/shop</a> to browse now.</p>
+      <p>We'll send your conference pricing sheet within 24 hours.<br>Questions? Email <a href="mailto:info@mounthydra.com" style="color:var(--gold);">info@mounthydra.com</a></p>
     </div>
 
   </div>
@@ -637,7 +669,7 @@
   <div class="footer-offer">⏳ Conference offer ends April 4, 2026</div>
   <div class="footer-copy">
     © 2026 Mount Hydra Corp. For qualified professionals only.<br />
-    <a href="https://mounthydra.us">mounthydra.us</a>
+    <a href="https://mounthydra.us">mounthydra.us</a> · <a href="mailto:info@mounthydra.com">info@mounthydra.com</a>
   </div>
 </footer>
 
@@ -649,9 +681,9 @@
     var email = document.getElementById('email').value.trim();
     var practice = document.getElementById('practice').value.trim();
     var role = document.getElementById('role').value;
-    var volume = document.getElementById('volume').value;
+    var interest = document.getElementById('interest').value;
 
-    if (!fname || !email || !practice || !role || !volume) {
+    if (!fname || !email || !practice || !role || !interest) {
       alert('Please fill in all required fields.');
       return;
     }
@@ -661,27 +693,24 @@
       return;
     }
 
-    // Store locally (optional — data visible in console for manual follow-up)
     var lead = {
       timestamp: new Date().toISOString(),
-      fname: fname,
+      name: fname,
       email: email,
       phone: document.getElementById('phone').value.trim(),
       practice: practice,
       role: role,
-      volume: volume,
+      interest: interest,
       source: 'Biohacker World 2026'
     };
     console.log('Lead captured:', JSON.stringify(lead, null, 2));
 
-    // Try to push to sessionStorage for reference
     try {
       var leads = JSON.parse(sessionStorage.getItem('mh_leads') || '[]');
       leads.push(lead);
       sessionStorage.setItem('mh_leads', JSON.stringify(leads));
     } catch(err) {}
 
-    // Show thank you
     document.getElementById('form-container').style.display = 'none';
     document.getElementById('thank-you').style.display = 'block';
   });
