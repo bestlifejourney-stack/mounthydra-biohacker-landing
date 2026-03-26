@@ -328,8 +328,9 @@
     var lead = { timestamp: new Date().toISOString(), name: fname, email: email, phone: document.getElementById('phone').value.trim(), practice: practice, role: role, interest: interest, source: 'Biohacker World 2026' };
     console.log('Lead captured:', JSON.stringify(lead, null, 2));
     try { var leads = JSON.parse(sessionStorage.getItem('mh_leads') || '[]'); leads.push(lead); sessionStorage.setItem('mh_leads', JSON.stringify(leads)); } catch(err) {}
-    document.getElementById('form-container').style.display = 'none';
-    document.getElementById('thank-you').style.display = 'block';
+    // Pass lead info to pricing page via URL params
+    var params = new URLSearchParams({name: fname, email: email, phone: document.getElementById('phone').value.trim(), practice: practice, interest: interest});
+    window.location.href = 'pricing.html?' + params.toString();
   });
 </script>
 
