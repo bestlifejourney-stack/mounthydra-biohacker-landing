@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conference Pricing — Mount Hydra | 3D Exo+ Core & Shield</title>
+  <meta name="description" content="Biohacker World conference pricing for 3D Exo+ Core & Shield. Volume discounts available. Order now — offer ends April 4, 2026." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0f172a; --navy-light: #1e293b; --navy-card: #162032;
+      --gold: #d4af37; --gold-light: #e8c84a; --gold-dim: #b8962e;
+      --white: #ffffff; --gray: #94a3b8; --gray-light: #cbd5e1;
+      --border: rgba(212, 175, 55, 0.2);
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--navy); color: var(--white); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(8px); z-index: 100; }
+    .nav-logo { font-size: 18px; font-weight: 700; letter-spacing: 0.08em; color: var(--gold); text-decoration: none; text-transform: uppercase; }
+    .nav-back { font-size: 14px; color: var(--gray-light); text-decoration: none; }
+    .nav-back:hover { color: var(--gold); }
+    .nav-badge { background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    .page-header { text-align: center; padding: 48px 24px 16px; max-width: 680px; margin: 0 auto; }
+    .page-header h1 { font-size: clamp(24px, 5vw, 36px); font-weight: 800; margin-bottom: 12px; }
+    .page-header h1 span { color: var(--gold); }
+    .page-header p { font-size: 16px; color: var(--gray-light); }
+    .countdown { display: inline-block; background: rgba(212,175,55,0.12); color: var(--gold); font-size: 13px; font-weight: 600; padding: 6px 16px; border-radius: 20px; border: 1px solid var(--border); margin-top: 16px; }
+
+    .section { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+    .section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+
+    .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media (min-width: 600px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .pricing-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 28px; position: relative; overflow: hidden; }
+    .pricing-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-dim), var(--gold)); }
+    .pricing-card.featured { border-color: var(--gold); }
+    .pricing-card.featured::after { content: 'RECOMMENDED'; position: absolute; top: 14px; right: -28px; background: var(--gold); color: var(--navy); font-size: 9px; font-weight: 800; letter-spacing: 0.1em; padding: 3px 32px; transform: rotate(45deg); }
+
+    .product-tag { display: inline-block; background: rgba(212,175,55,0.1); color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px; margin-bottom: 14px; }
+    .product-img-wrap { text-align: center; margin-bottom: 16px; }
+    .product-img-wrap img { max-height: 140px; width: auto; }
+    .product-name { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .product-base-price { font-size: 28px; font-weight: 800; color: var(--gold); margin-bottom: 4px; }
+    .product-base-label { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
+
+    .pricing-table { width: 100%; border-collapse: collapse; }
+    .pricing-table th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray); padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .pricing-table td { font-size: 14px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); color: var(--gray-light); }
+    .pricing-table td:last-child { color: var(--white); font-weight: 700; text-align: right; }
+    .pricing-table th:last-child { text-align: right; }
+    .pricing-table .per-unit { display: block; font-size: 11px; color: var(--gray); font-weight: 400; }
+    .discount { font-size: 11px; color: var(--gold); font-weight: 600; }
+
+    .order-btn { display: block; width: 100%; background: var(--gold); color: var(--navy); font-size: 15px; font-weight: 700; padding: 14px; border-radius: 8px; border: none; cursor: pointer; margin-top: 20px; text-align: center; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .order-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .divider { height: 1px; background: var(--border); max-width: 900px; margin: 0 auto; }
+
+    /* Order form */
+    .order-section { background: var(--navy); }
+    .order-wrap { background: var(--navy-light); border: 1px solid var(--border); border-radius: 16px; padding: 40px 32px; max-width: 600px; margin: 0 auto; }
+    .order-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .order-subtitle { font-size: 14px; color: var(--gray); margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px; }
+    label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray); }
+    input, select, textarea { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; color: var(--white); font-size: 15px; padding: 12px 14px; width: 100%; outline: none; transition: border-color 0.2s; -webkit-appearance: none; appearance: none; font-family: inherit; }
+    textarea { min-height: 80px; resize: vertical; }
+    select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+    select option { background: var(--navy-light); color: var(--white); }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold); }
+    input::placeholder, textarea::placeholder { color: var(--gray); }
+    .btn-submit { width: 100%; background: var(--gold); color: var(--navy); font-size: 16px; font-weight: 700; padding: 16px; border-radius: 8px; border: none; cursor: pointer; margin-top: 8px; transition: background 0.2s, transform 0.15s; }
+    .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .form-privacy { text-align: center; font-size: 12px; color: var(--gray); margin-top: 14px; }
+
+    #thank-you { display: none; text-align: center; padding: 40px 20px; }
+    #thank-you .ty-icon { font-size: 48px; margin-bottom: 16px; }
+    #thank-you h3 { font-size: 22px; font-weight: 700; margin-bottom: 8px; color: var(--gold); }
+    #thank-you p { font-size: 15px; color: var(--gray-light); line-height: 1.6; }
+
+    footer { background: var(--navy-light); border-top: 1px solid var(--border); padding: 36px 24px; text-align: center; }
+    .footer-logo { font-size: 16px; font-weight: 700; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase; margin-bottom: 10px; }
+    .footer-offer { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
+    .footer-copy { font-size: 12px; color: var(--gray); line-height: 1.8; }
+    .footer-copy a { color: var(--gray-light); text-decoration: none; }
+    .footer-copy a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Mount Hydra</a>
+  <a href="index.html" class="nav-back">← Back</a>
+  <span class="nav-badge">Biohacker World · Mar 28–29</span>
+</nav>
+
+<div class="page-header">
+  <h1><span>Conference Pricing</span></h1>
+  <p>Exclusive rates for Biohacker World attendees. Volume discounts on all products.</p>
+  <div class="countdown">⏳ Offer valid through April 4, 2026</div>
+</div>
+
+<!-- PRICING CARDS -->
+<section class="section">
+  <div class="pricing-grid">
+
+    <div class="pricing-card">
+      <span class="product-tag">Step 1</span>
+      <div class="product-img-wrap">
+        <img src="images/core-vial.png" alt="3D Exo+ Core vial" />
+      </div>
+      <div class="product-name">3D Exo+ Core</div>
+      <div class="product-base-price">$350</div>
+      <div class="product-base-label">per vial · single unit</div>
+      <table class="pricing-table">
+        <tr><th>Qty</th><th>Savings</th><th>Total</th></tr>
+        <tr>
+          <td>3 vials</td>
+          <td><span class="discount">10% off</span></td>
+          <td>$945<span class="per-unit">$315/vial</span></td>
+        </tr>
+        <tr>
+          <td>5 vials</td>
+          <td><span class="discount">15% off</span></td>
+          <td>$1,488<span class="per-unit">$297.50/vial</span></td>
+        </tr>
+        <tr>
+          <td>10 vials</td>
+          <td><span class="discount">25% off</span></td>
+          <td>$2,625<span class="per-unit">$262.50/vial</span></td>
+        </tr>
+      </table>
+      <a href="#place-order" class="order-btn">Order Core →</a>
+    </div>
+
+    <div class="pricing-card featured">
+      <span class="product-tag">Step 1 + 2 — Best Value</span>
+      <div class="product-img-wrap">
+        <img src="images/core-vial.png" alt="3D Exo+ Core vial" style="max-height:120px;" />
+        <img src="images/shield-vial.png" alt="3D Exo+ Shield vial" style="max-height:120px; margin-left: -16px;" />
+      </div>
+      <div class="product-name">3D Exo+ Core + Shield</div>
+      <div class="product-base-price">$450</div>
+      <div class="product-base-label">per set · single unit</div>
+      <table class="pricing-table">
+        <tr><th>Qty</th><th>Savings</th><th>Total</th></tr>
+        <tr>
+          <td>3 sets</td>
+          <td><span class="discount">10% off</span></td>
+          <td>$1,215<span class="per-unit">$405/set</span></td>
+        </tr>
+        <tr>
+          <td>5 sets</td>
+          <td><span class="discount">15% off</span></td>
+          <td>$1,913<span class="per-unit">$382.50/set</span></td>
+        </tr>
+        <tr>
+          <td>10 sets</td>
+          <td><span class="discount">25% off</span></td>
+          <td>$3,375<span class="per-unit">$337.50/set</span></td>
+        </tr>
+      </table>
+      <a href="#place-order" class="order-btn">Order Core + Shield →</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ORDER FORM -->
+<section class="section order-section" id="place-order">
+  <div class="section-label">Place Your Order</div>
+  <div class="order-wrap">
+    <div id="order-form-container">
+      <div class="order-title">Conference Order</div>
+      <p class="order-subtitle">Fill out the form below. We'll confirm your order and send an invoice within 24 hours.</p>
+      <form id="order-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Name *</label>
+            <input type="text" id="fname" name="fname" placeholder="Dr. Sarah Chen" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@clinic.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="practice">Business / Practice *</label>
+            <input type="text" id="practice" name="practice" placeholder="Renew Wellness Clinic" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="product">Product *</label>
+            <select id="product" name="product" required>
+              <option value="" disabled selected>Select product…</option>
+              <option value="core">3D Exo+ Core — $350/vial</option>
+              <option value="core-shield">3D Exo+ Core + Shield — $450/set</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity *</label>
+            <select id="quantity" name="quantity" required>
+              <option value="" disabled selected>Select quantity…</option>
+              <option value="1">1 unit</option>
+              <option value="3">3 units (10% off)</option>
+              <option value="5">5 units (15% off)</option>
+              <option value="10">10 units (25% off)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="shipping">Shipping Address *</label>
+          <textarea id="shipping" name="shipping" placeholder="Street, City, State, ZIP" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" placeholder="Any special instructions or questions" style="min-height:60px;"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Submit Order →</button>
+        <p class="form-privacy">🔒 Your info is private. We'll send an invoice to confirm — no charges until you approve.</p>
+      </form>
+    </div>
+    <div id="thank-you">
+      <div class="ty-icon">✅</div>
+      <h3>Order Received!</h3>
+      <p>We'll review your order and send a confirmation invoice within 24 hours.<br><br>Questions? Email <a href="mailto:info@mounthydra.com" style="color:var(--gold);">info@mounthydra.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Mount Hydra</div>
+  <div class="footer-offer">⏳ Conference offer ends April 4, 2026</div>
+  <div class="footer-copy">
+    © 2026 Mount Hydra Corp. For qualified professionals only.<br />
+    <a href="https://mounthydra.us">mounthydra.us</a> · <a href="mailto:info@mounthydra.com">info@mounthydra.com</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('order-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var fname = document.getElementById('fname').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var practice = document.getElementById('practice').value.trim();
+    var product = document.getElementById('product').value;
+    var quantity = document.getElementById('quantity').value;
+    var shipping = document.getElementById('shipping').value.trim();
+    if (!fname || !email || !phone || !practice || !product || !quantity || !shipping) { alert('Please fill in all required fields.'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+    var order = {
+      timestamp: new Date().toISOString(),
+      name: fname, email: email, phone: phone, practice: practice,
+      product: product, quantity: quantity, shipping: shipping,
+      notes: document.getElementById('notes').value.trim(),
+      source: 'Biohacker World 2026 — conference.mounthydra.us'
+    };
+    console.log('Order submitted:', JSON.stringify(order, null, 2));
+    try { var orders = JSON.parse(sessionStorage.getItem('mh_orders') || '[]'); orders.push(order); sessionStorage.setItem('mh_orders', JSON.stringify(orders)); } catch(err) {}
+    document.getElementById('order-form-container').style.display = 'none';
+    document.getElementById('thank-you').style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
