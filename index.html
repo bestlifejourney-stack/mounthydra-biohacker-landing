@@ -301,22 +301,12 @@
     console.log('Lead captured:', JSON.stringify(lead, null, 2));
     try { var leads = JSON.parse(localStorage.getItem('mh_leads') || '[]'); leads.push(lead); localStorage.setItem('mh_leads', JSON.stringify(leads)); } catch(err) {}
 
-    // Send lead to GHL webhook (if configured)
-    var ghlWebhookUrl = localStorage.getItem('mh_ghl_webhook') || '';
-    if (ghlWebhookUrl) {
-      fetch(ghlWebhookUrl, {
-        method: 'POST', mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          first_name: fname.split(' ')[0],
-          last_name: fname.split(' ').slice(1).join(' '),
-          email: email, phone: phone,
-          company_name: practice,
-          tags: ['biohacker-world-2026', 'conference-lead'],
-          source: 'Biohacker World Conference Landing Page'
-        })
-      }).catch(function() {});
-    }
+    // Send lead to WordPress endpoint (emails info@mounthydra.com)
+    fetch('https://mounthydra.us/wp-json/mh/v1/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: fname, email: email, phone: phone, practice: practice, role: role })
+    }).catch(function() {});
 
     // Pass lead info to pricing page via URL params
     var params = new URLSearchParams({name: fname, email: email, phone: phone, practice: practice, role: role});
