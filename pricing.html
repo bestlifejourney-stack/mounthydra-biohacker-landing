@@ -246,6 +246,38 @@
           </div>
         </div>
 
+        <div style="font-size:14px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; margin:24px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--border);">Shipping Address</div>
+        <div style="display:flex; align-items:center; gap:10px; margin:8px 0 16px; cursor:pointer;">
+          <input type="checkbox" id="same-address" checked style="appearance:none; -webkit-appearance:none; width:20px; height:20px; border:2px solid var(--gray); border-radius:4px; cursor:pointer; position:relative; flex-shrink:0;" />
+          <label for="same-address" style="font-size:13px; color:var(--gray-light); text-transform:none; letter-spacing:0; cursor:pointer;">Same as billing address</label>
+        </div>
+        <div id="shipping-fields" style="display:none;">
+          <div class="form-group">
+            <label for="shipping-street">Street Address *</label>
+            <input type="text" id="shipping-street" placeholder="123 Main St, Suite 100" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="shipping-city">City *</label>
+              <input type="text" id="shipping-city" placeholder="Los Angeles" />
+            </div>
+            <div class="form-group">
+              <label for="shipping-state">State *</label>
+              <input type="text" id="shipping-state" placeholder="CA" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="shipping-zip">ZIP Code *</label>
+              <input type="text" id="shipping-zip" placeholder="90001" />
+            </div>
+            <div class="form-group">
+              <label for="shipping-country">Country</label>
+              <input type="text" id="shipping-country" value="United States" />
+            </div>
+          </div>
+        </div>
+
         <button type="submit" class="place-order-btn" style="margin-top:12px;">Choose Payment Method →</button>
         <p style="text-align:center; font-size:12px; color:var(--gray); margin-top:14px;">🔒 You'll be taken to our secure checkout on mounthydra.us to complete payment via Stripe.</p>
       </form>
@@ -281,6 +313,16 @@
     section.style.display = 'block';
     section.scrollIntoView({ behavior: 'smooth' });
   }
+
+  // Same as billing checkbox styling
+  var sameCheck = document.getElementById('same-address');
+  function updateCheckStyle() {
+    sameCheck.style.borderColor = sameCheck.checked ? 'var(--gold)' : 'var(--gray)';
+    sameCheck.style.background = sameCheck.checked ? 'var(--gold)' : 'transparent';
+    document.getElementById('shipping-fields').style.display = sameCheck.checked ? 'none' : 'block';
+  }
+  sameCheck.addEventListener('change', updateCheckStyle);
+  updateCheckStyle();
 
   // Billing form submission — redirect to WooCommerce checkout
   document.getElementById('billing-form').addEventListener('submit', function(e) {
