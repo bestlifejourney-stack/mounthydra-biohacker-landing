@@ -35,7 +35,7 @@
     .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
     @media (min-width: 700px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
 
-    .pricing-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 28px; position: relative; overflow: hidden; }
+    .pricing-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 28px; position: relative; overflow: hidden; text-align: center; }
     .pricing-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-dim), var(--gold)); }
     .pricing-card.featured { border-color: var(--gold); }
     /* No ribbon needed — single product */
