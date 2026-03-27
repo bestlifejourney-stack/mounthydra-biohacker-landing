@@ -144,7 +144,7 @@
       <div class="product-base-price">$1,215</div>
       <div class="product-base-label">$405/set · <span class="discount">10% off</span></div>
       <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $135 vs single pricing</div>
-      <button class="place-order-btn" onclick="orderQty(3, 1215, 405)">Place Order</button>
+      <a href="https://mounthydra.us/?add-to-cart=4452&coupon_code=BIOHACKER2026" class="place-order-btn">Place Order</a>
     </div>
 
     <!-- 5 SETS -->
@@ -159,7 +159,7 @@
       <div class="product-base-price">$1,913</div>
       <div class="product-base-label">$382.50/set · <span class="discount">15% off</span></div>
       <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $338 vs single pricing</div>
-      <button class="place-order-btn" onclick="orderQty(5, 1913, 382.50)">Place Order</button>
+      <a href="https://mounthydra.us/?add-to-cart=4453&coupon_code=BIOHACKER2026" class="place-order-btn">Place Order</a>
     </div>
 
     <!-- 10 SETS -->
@@ -174,7 +174,7 @@
       <div class="product-base-price">$3,375</div>
       <div class="product-base-label">$337.50/set · <span class="discount">25% off</span></div>
       <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $1,125 vs single pricing</div>
-      <button class="place-order-btn" onclick="orderQty(10, 3375, 337.50)">Place Order</button>
+      <a href="https://mounthydra.us/?add-to-cart=4454&coupon_code=BIOHACKER2026" class="place-order-btn">Place Order</a>
     </div>
 
   </div>
@@ -182,120 +182,14 @@
 
 <div class="divider"></div>
 
-<!-- ORDER FORM -->
-<section class="section order-section" id="place-order">
-  <div class="section-label">Complete Your Order</div>
-  <div class="order-wrap">
-    <div id="order-form-container">
-      <div class="order-title">Conference Order</div>
-      <p class="order-subtitle">We'll confirm your order and send an invoice within 24 hours.</p>
-
-      <!-- Order summary -->
-      <div class="order-summary" id="order-summary" style="display:none;">
-        <div class="order-summary-title">Your Selection</div>
-        <div class="order-summary-line"><span id="sum-product">—</span><span id="sum-qty">—</span></div>
-        <div class="order-summary-line total"><span>Total</span><span id="sum-total">—</span></div>
-      </div>
-
-      <form id="order-form" novalidate>
-        <input type="hidden" id="sel-product" name="product" />
-        <input type="hidden" id="sel-quantity" name="quantity" />
-        <input type="hidden" id="sel-total" name="total" />
-
-        <div class="form-section-header">Contact Information</div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">Name *</label>
-            <input type="text" id="fname" name="fname" placeholder="Dr. Sarah Chen" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" placeholder="you@clinic.com" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">Phone *</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
-          </div>
-          <div class="form-group">
-            <label for="practice">Business / Practice *</label>
-            <input type="text" id="practice" name="practice" placeholder="Renew Wellness Clinic" required />
-          </div>
-        </div>
-
-        <div class="form-section-header">Billing Address</div>
-        <div class="form-group">
-          <label for="billing-street">Street Address *</label>
-          <input type="text" id="billing-street" name="billing-street" placeholder="123 Main St, Suite 100" required />
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="billing-city">City *</label>
-            <input type="text" id="billing-city" name="billing-city" placeholder="Los Angeles" required />
-          </div>
-          <div class="form-group">
-            <label for="billing-state">State *</label>
-            <input type="text" id="billing-state" name="billing-state" placeholder="CA" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="billing-zip">ZIP Code *</label>
-            <input type="text" id="billing-zip" name="billing-zip" placeholder="90001" required />
-          </div>
-          <div class="form-group">
-            <label for="billing-country">Country</label>
-            <input type="text" id="billing-country" name="billing-country" value="United States" />
-          </div>
-        </div>
-
-        <div class="form-section-header">Shipping Address</div>
-        <div class="same-address-row">
-          <input type="checkbox" id="same-address" checked />
-          <label for="same-address">Same as billing address</label>
-        </div>
-        <div id="shipping-fields" style="display:none;">
-          <div class="form-group">
-            <label for="shipping-street">Street Address *</label>
-            <input type="text" id="shipping-street" name="shipping-street" placeholder="123 Main St, Suite 100" />
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="shipping-city">City *</label>
-              <input type="text" id="shipping-city" name="shipping-city" placeholder="Los Angeles" />
-            </div>
-            <div class="form-group">
-              <label for="shipping-state">State *</label>
-              <input type="text" id="shipping-state" name="shipping-state" placeholder="CA" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="shipping-zip">ZIP Code *</label>
-              <input type="text" id="shipping-zip" name="shipping-zip" placeholder="90001" />
-            </div>
-            <div class="form-group">
-              <label for="shipping-country">Country</label>
-              <input type="text" id="shipping-country" name="shipping-country" value="United States" />
-            </div>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="notes">Notes (optional)</label>
-          <textarea id="notes" name="notes" placeholder="Any special instructions or questions" style="min-height:60px;"></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Place Order</button>
-        <p class="form-privacy">🔒 Your info is private. We'll send an invoice to confirm — no charges until you approve.</p>
-      </form>
-    </div>
-    <div id="thank-you">
-      <div class="ty-icon">✅</div>
-      <h3>Order Received!</h3>
-      <p>We'll review your order and send a confirmation invoice within 24 hours.<br><br>Questions? Email <a href="mailto:info@mounthydra.com" style="color:var(--gold);">info@mounthydra.com</a></p>
-    </div>
+<!-- CHECKOUT INFO -->
+<section class="section" id="place-order" style="text-align:center; max-width:600px; margin:0 auto;">
+  <div style="background:var(--navy-card); border:1px solid var(--border); border-radius:12px; padding:32px 28px;">
+    <div style="font-size:28px; margin-bottom:12px;">🔒</div>
+    <div style="font-size:18px; font-weight:700; margin-bottom:8px;">Secure Checkout</div>
+    <p style="font-size:14px; color:var(--gray-light); margin-bottom:16px;">Clicking "Place Order" above adds your selection to cart and takes you to our secure checkout on <strong>mounthydra.us</strong>. Payment is processed via Stripe.</p>
+    <p style="font-size:13px; color:var(--gray);">Conference discount code <strong style="color:var(--gold);">BIOHACKER2026</strong> is auto-applied at checkout.</p>
+    <p style="font-size:13px; color:var(--gray); margin-top:12px;">Questions? Email <a href="mailto:info@mounthydra.com" style="color:var(--gold);">info@mounthydra.com</a></p>
   </div>
 </section>
 
@@ -308,81 +202,7 @@
   </div>
 </footer>
 
-<script>
-  // Pre-populate from URL params (passed from landing page form)
-  var params = new URLSearchParams(window.location.search);
-  if (params.get('name')) document.getElementById('fname').value = params.get('name');
-  if (params.get('email')) document.getElementById('email').value = params.get('email');
-  if (params.get('phone')) document.getElementById('phone').value = params.get('phone');
-  if (params.get('practice')) document.getElementById('practice').value = params.get('practice');
-
-  // Order quantity button
-  function orderQty(qty, total, perUnit) {
-    document.getElementById('sel-product').value = 'core-shield';
-    document.getElementById('sel-quantity').value = qty;
-    document.getElementById('sel-total').value = total;
-
-    var summary = document.getElementById('order-summary');
-    summary.style.display = 'block';
-    document.getElementById('sum-product').textContent = '3D Exo+ Core + Shield';
-    document.getElementById('sum-qty').textContent = qty + ' sets';
-    document.getElementById('sum-total').textContent = '$' + Number(total).toLocaleString();
-
-    document.getElementById('place-order').scrollIntoView({ behavior: 'smooth' });
-  }
-
-  // Toggle shipping address fields
-  document.getElementById('same-address').addEventListener('change', function() {
-    document.getElementById('shipping-fields').style.display = this.checked ? 'none' : 'block';
-  });
-
-  // Form submission
-  document.getElementById('order-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var fname = document.getElementById('fname').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var phone = document.getElementById('phone').value.trim();
-    var practice = document.getElementById('practice').value.trim();
-    var product = document.getElementById('sel-product').value;
-    var quantity = document.getElementById('sel-quantity').value;
-    var billingStreet = document.getElementById('billing-street').value.trim();
-    var billingCity = document.getElementById('billing-city').value.trim();
-    var billingState = document.getElementById('billing-state').value.trim();
-    var billingZip = document.getElementById('billing-zip').value.trim();
-
-    if (!fname || !email || !phone || !practice || !product || !quantity || !billingStreet || !billingCity || !billingState || !billingZip) {
-      alert('Please fill in all required fields and select a product with quantity above.');
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
-
-    var sameAddress = document.getElementById('same-address').checked;
-    var shippingAddress = sameAddress
-      ? { street: billingStreet, city: billingCity, state: billingState, zip: billingZip, country: document.getElementById('billing-country').value }
-      : {
-          street: document.getElementById('shipping-street').value.trim(),
-          city: document.getElementById('shipping-city').value.trim(),
-          state: document.getElementById('shipping-state').value.trim(),
-          zip: document.getElementById('shipping-zip').value.trim(),
-          country: document.getElementById('shipping-country').value
-        };
-
-    var order = {
-      timestamp: new Date().toISOString(),
-      name: fname, email: email, phone: phone, practice: practice,
-      product: product, quantity: quantity, total: document.getElementById('sel-total').value,
-      billing: { street: billingStreet, city: billingCity, state: billingState, zip: billingZip, country: document.getElementById('billing-country').value },
-      shipping: shippingAddress,
-      notes: document.getElementById('notes').value.trim(),
-      source: 'Biohacker World 2026 — conference.mounthydra.us'
-    };
-    console.log('Order submitted:', JSON.stringify(order, null, 2));
-    try { var orders = JSON.parse(localStorage.getItem('mh_orders') || '[]'); orders.push(order); localStorage.setItem('mh_orders', JSON.stringify(orders)); } catch(err) {}
-
-    document.getElementById('order-form-container').style.display = 'none';
-    document.getElementById('thank-you').style.display = 'block';
-  });
-</script>
+<!-- No client-side JS needed — Place Order links go directly to WooCommerce checkout -->
 
 </body>
 </html>
