@@ -381,8 +381,39 @@
       'shipping_country': 'US'
     });
 
-    // Redirect to WooCommerce — add to cart (goes to cart page, then checkout)
-    window.location.href = 'https://mounthydra.us/?add-to-cart=' + variationId;
+    // Split name into first/last for WooCommerce fields
+    var nameParts = fname.split(' ');
+    var firstName = nameParts[0] || '';
+    var lastName = nameParts.slice(1).join(' ') || '';
+    var practice = document.getElementById('practice').value.trim();
+    var sameAddr = document.getElementById('same-address').checked;
+
+    // Build checkout URL with billing params that WooCommerce will pre-fill
+    var billingParams = new URLSearchParams({
+      billing_first_name: firstName,
+      billing_last_name: lastName,
+      billing_company: practice,
+      billing_email: email,
+      billing_phone: phone,
+      billing_address_1: billingStreet,
+      billing_city: billingCity,
+      billing_state: billingState,
+      billing_postcode: billingZip
+    });
+
+    // Add shipping if different
+    if (!sameAddr) {
+      billingParams.set('shipping_first_name', firstName);
+      billingParams.set('shipping_last_name', lastName);
+      billingParams.set('shipping_company', practice);
+      billingParams.set('shipping_address_1', document.getElementById('shipping-street').value.trim());
+      billingParams.set('shipping_city', document.getElementById('shipping-city').value.trim());
+      billingParams.set('shipping_state', document.getElementById('shipping-state').value.trim());
+      billingParams.set('shipping_postcode', document.getElementById('shipping-zip').value.trim());
+    }
+
+    // Add to cart and redirect to checkout with billing pre-filled
+    window.location.href = 'https://mounthydra.us/?add-to-cart=' + variationId + '&' + billingParams.toString();
   });
 </script>
 
