@@ -32,7 +32,8 @@
     .section { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
     .section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
 
-    .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 500px; margin: 0 auto; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media (min-width: 700px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
 
     .pricing-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 28px; position: relative; overflow: hidden; }
     .pricing-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-dim), var(--gold)); }
@@ -131,53 +132,49 @@
 <section class="section">
   <div class="pricing-grid">
 
-    <!-- CORE + SHIELD -->
-    <div class="pricing-card featured" style="max-width:480px; margin:0 auto;">
-      <span class="product-tag">Step 1 + 2 — Best Value</span>
+    <!-- 3 SETS -->
+    <div class="pricing-card">
+      <span class="product-tag">Starter</span>
       <div class="product-img-wrap">
-        <img src="images/core-vial.png" alt="3D Exo+ Core vial" style="max-height:120px;" />
-        <img src="images/shield-vial.png" alt="3D Exo+ Shield vial" style="max-height:120px; margin-left: -16px;" />
+        <img src="images/core-vial.png" alt="3D Exo+ Core" style="max-height:90px;" />
+        <img src="images/shield-vial.png" alt="3D Exo+ Shield" style="max-height:90px; margin-left:-12px;" />
       </div>
-      <div class="product-name">3D Exo+ Core + Shield</div>
-      <div class="product-base-price">$450</div>
-      <div class="product-base-label">per set · single unit</div>
+      <div class="product-name" style="font-size:18px;">3 Sets</div>
+      <div style="font-size:13px; color:var(--gray-light); margin-bottom:12px;">Core + Shield</div>
+      <div class="product-base-price">$1,215</div>
+      <div class="product-base-label">$405/set · <span class="discount">10% off</span></div>
+      <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $135 vs single pricing</div>
+      <button class="place-order-btn" onclick="orderQty(3, 1215, 405)">Place Order</button>
+    </div>
 
-      <div class="qty-options">
-        <label class="qty-option" onclick="selectQty(this)">
-          <input type="radio" name="shield-qty" value="3" data-product="core-shield" data-total="1215" data-per="405" />
-          <div class="qty-details">
-            <div class="qty-label">3 sets</div>
-            <div class="qty-discount">10% off</div>
-          </div>
-          <div class="qty-price">
-            <div class="qty-total">$1,215</div>
-            <div class="qty-per-unit">$405/set</div>
-          </div>
-        </label>
-        <label class="qty-option" onclick="selectQty(this)">
-          <input type="radio" name="shield-qty" value="5" data-product="core-shield" data-total="1913" data-per="382.50" />
-          <div class="qty-details">
-            <div class="qty-label">5 sets</div>
-            <div class="qty-discount">15% off</div>
-          </div>
-          <div class="qty-price">
-            <div class="qty-total">$1,913</div>
-            <div class="qty-per-unit">$382.50/set</div>
-          </div>
-        </label>
-        <label class="qty-option" onclick="selectQty(this)">
-          <input type="radio" name="shield-qty" value="10" data-product="core-shield" data-total="3375" data-per="337.50" />
-          <div class="qty-details">
-            <div class="qty-label">10 sets</div>
-            <div class="qty-discount">25% off</div>
-          </div>
-          <div class="qty-price">
-            <div class="qty-total">$3,375</div>
-            <div class="qty-per-unit">$337.50/set</div>
-          </div>
-        </label>
+    <!-- 5 SETS -->
+    <div class="pricing-card featured">
+      <span class="product-tag">Most Popular</span>
+      <div class="product-img-wrap">
+        <img src="images/core-vial.png" alt="3D Exo+ Core" style="max-height:90px;" />
+        <img src="images/shield-vial.png" alt="3D Exo+ Shield" style="max-height:90px; margin-left:-12px;" />
       </div>
-      <button class="place-order-btn" onclick="orderProduct()">Place Order</button>
+      <div class="product-name" style="font-size:18px;">5 Sets</div>
+      <div style="font-size:13px; color:var(--gray-light); margin-bottom:12px;">Core + Shield</div>
+      <div class="product-base-price">$1,913</div>
+      <div class="product-base-label">$382.50/set · <span class="discount">15% off</span></div>
+      <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $338 vs single pricing</div>
+      <button class="place-order-btn" onclick="orderQty(5, 1913, 382.50)">Place Order</button>
+    </div>
+
+    <!-- 10 SETS -->
+    <div class="pricing-card">
+      <span class="product-tag">Best Value</span>
+      <div class="product-img-wrap">
+        <img src="images/core-vial.png" alt="3D Exo+ Core" style="max-height:90px;" />
+        <img src="images/shield-vial.png" alt="3D Exo+ Shield" style="max-height:90px; margin-left:-12px;" />
+      </div>
+      <div class="product-name" style="font-size:18px;">10 Sets</div>
+      <div style="font-size:13px; color:var(--gray-light); margin-bottom:12px;">Core + Shield</div>
+      <div class="product-base-price">$3,375</div>
+      <div class="product-base-label">$337.50/set · <span class="discount">25% off</span></div>
+      <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $1,125 vs single pricing</div>
+      <button class="place-order-btn" onclick="orderQty(10, 3375, 337.50)">Place Order</button>
     </div>
 
   </div>
@@ -319,37 +316,18 @@
   if (params.get('phone')) document.getElementById('phone').value = params.get('phone');
   if (params.get('practice')) document.getElementById('practice').value = params.get('practice');
 
-  // Radio button selection highlighting
-  function selectQty(el) {
-    var card = el.closest('.pricing-card');
-    card.querySelectorAll('.qty-option').forEach(function(opt) { opt.classList.remove('selected'); });
-    el.classList.add('selected');
-  }
-
-  // Order product button
-  function orderProduct() {
-    var selected = document.querySelector('input[name="shield-qty"]:checked');
-    if (!selected) { alert('Please select a quantity first.'); return; }
-
-    var qty = selected.value;
-    var total = selected.dataset.total;
-    var productName = '3D Exo+ Core + Shield';
-    var unitLabel = 'sets';
-    var product = 'core-shield';
-
-    // Set hidden fields
-    document.getElementById('sel-product').value = product;
+  // Order quantity button
+  function orderQty(qty, total, perUnit) {
+    document.getElementById('sel-product').value = 'core-shield';
     document.getElementById('sel-quantity').value = qty;
     document.getElementById('sel-total').value = total;
 
-    // Show order summary
     var summary = document.getElementById('order-summary');
     summary.style.display = 'block';
-    document.getElementById('sum-product').textContent = productName;
-    document.getElementById('sum-qty').textContent = qty + ' ' + unitLabel;
+    document.getElementById('sum-product').textContent = '3D Exo+ Core + Shield';
+    document.getElementById('sum-qty').textContent = qty + ' sets';
     document.getElementById('sum-total').textContent = '$' + Number(total).toLocaleString();
 
-    // Scroll to form
     document.getElementById('place-order').scrollIntoView({ behavior: 'smooth' });
   }
 
