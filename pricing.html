@@ -144,7 +144,7 @@
       <div class="product-base-price">$1,215</div>
       <div class="product-base-label">$405/set · <span class="discount">10% off</span></div>
       <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $135 vs single pricing</div>
-      <a href="https://mounthydra.us/?add-to-cart=4452" class="place-order-btn">Place Order</a>
+      <button class="place-order-btn" onclick="selectBundle(3, 1215, 405, 4452)">Place in Cart</button>
     </div>
 
     <!-- 5 SETS -->
@@ -159,7 +159,7 @@
       <div class="product-base-price">$1,913</div>
       <div class="product-base-label">$382.50/set · <span class="discount">15% off</span></div>
       <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $338 vs single pricing</div>
-      <a href="https://mounthydra.us/?add-to-cart=4453" class="place-order-btn">Place Order</a>
+      <button class="place-order-btn" onclick="selectBundle(5, 1913, 382.50, 4453)">Place in Cart</button>
     </div>
 
     <!-- 10 SETS -->
@@ -174,7 +174,7 @@
       <div class="product-base-price">$3,375</div>
       <div class="product-base-label">$337.50/set · <span class="discount">25% off</span></div>
       <div style="font-size:12px; color:var(--gray); margin-bottom:16px;">Save $1,125 vs single pricing</div>
-      <a href="https://mounthydra.us/?add-to-cart=4454" class="place-order-btn">Place Order</a>
+      <button class="place-order-btn" onclick="selectBundle(10, 3375, 337.50, 4454)">Place in Cart</button>
     </div>
 
   </div>
@@ -182,14 +182,74 @@
 
 <div class="divider"></div>
 
-<!-- CHECKOUT INFO -->
-<section class="section" id="place-order" style="text-align:center; max-width:600px; margin:0 auto;">
-  <div style="background:var(--navy-card); border:1px solid var(--border); border-radius:12px; padding:32px 28px;">
-    <div style="font-size:28px; margin-bottom:12px;">🔒</div>
-    <div style="font-size:18px; font-weight:700; margin-bottom:8px;">Secure Checkout</div>
-    <p style="font-size:14px; color:var(--gray-light); margin-bottom:16px;">Clicking "Place Order" above adds your selection to cart and takes you to our secure checkout on <strong>mounthydra.us</strong>. Payment is processed via Stripe.</p>
-    <p style="font-size:13px; color:var(--gray);">Conference pricing is already applied — no coupon code needed.</p>
-    <p style="font-size:13px; color:var(--gray); margin-top:12px;">Questions? Email <a href="mailto:info@mounthydra.com" style="color:var(--gold);">info@mounthydra.com</a></p>
+<!-- BILLING & CHECKOUT -->
+<section class="section" id="billing-section" style="display:none;">
+  <div style="max-width:600px; margin:0 auto;">
+    <div style="background:rgba(212,175,55,0.06); border:1px solid var(--border); border-radius:8px; padding:16px; margin-bottom:24px; text-align:center;">
+      <div style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold); margin-bottom:8px;">Your Selection</div>
+      <div style="display:flex; justify-content:space-between; font-size:14px; color:var(--gray-light); padding:4px 0;"><span id="cart-product">—</span><span id="cart-qty">—</span></div>
+      <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:700; color:var(--white); border-top:1px solid var(--border); margin-top:8px; padding-top:8px;"><span>Total</span><span id="cart-total">—</span></div>
+    </div>
+
+    <div style="background:var(--navy-light); border:1px solid var(--border); border-radius:16px; padding:40px 32px;">
+      <div style="font-size:22px; font-weight:700; margin-bottom:6px;">Billing Details</div>
+      <p style="font-size:14px; color:var(--gray); margin-bottom:28px;">Enter your billing address. You'll choose a payment method on the next page.</p>
+
+      <form id="billing-form" novalidate>
+        <input type="hidden" id="sel-variation" />
+
+        <div style="font-size:14px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--border);">Contact Information</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Name *</label>
+            <input type="text" id="fname" name="fname" placeholder="Dr. Sarah Chen" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@clinic.com" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required />
+          </div>
+          <div class="form-group">
+            <label for="practice">Business / Practice *</label>
+            <input type="text" id="practice" name="practice" placeholder="Renew Wellness Clinic" required />
+          </div>
+        </div>
+
+        <div style="font-size:14px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:0.08em; margin:24px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--border);">Billing Address</div>
+        <div class="form-group">
+          <label for="billing-street">Street Address *</label>
+          <input type="text" id="billing-street" name="billing-street" placeholder="123 Main St, Suite 100" required />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="billing-city">City *</label>
+            <input type="text" id="billing-city" name="billing-city" placeholder="Los Angeles" required />
+          </div>
+          <div class="form-group">
+            <label for="billing-state">State *</label>
+            <input type="text" id="billing-state" name="billing-state" placeholder="CA" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="billing-zip">ZIP Code *</label>
+            <input type="text" id="billing-zip" name="billing-zip" placeholder="90001" required />
+          </div>
+          <div class="form-group">
+            <label for="billing-country">Country</label>
+            <input type="text" id="billing-country" name="billing-country" value="United States" />
+          </div>
+        </div>
+
+        <button type="submit" class="place-order-btn" style="margin-top:12px;">Choose Payment Method →</button>
+        <p style="text-align:center; font-size:12px; color:var(--gray); margin-top:14px;">🔒 You'll be taken to our secure checkout on mounthydra.us to complete payment via Stripe.</p>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -202,7 +262,58 @@
   </div>
 </footer>
 
-<!-- No client-side JS needed — Place Order links go directly to WooCommerce checkout -->
+<script>
+  // Pre-populate from URL params (passed from landing page form)
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('name')) document.getElementById('fname').value = params.get('name');
+  if (params.get('email')) document.getElementById('email').value = params.get('email');
+  if (params.get('phone')) document.getElementById('phone').value = params.get('phone');
+  if (params.get('practice')) document.getElementById('practice').value = params.get('practice');
+
+  // Select a bundle — show billing form
+  function selectBundle(qty, total, perUnit, variationId) {
+    document.getElementById('sel-variation').value = variationId;
+    document.getElementById('cart-product').textContent = '3D Exo+ Core + Shield';
+    document.getElementById('cart-qty').textContent = qty + ' sets';
+    document.getElementById('cart-total').textContent = '$' + Number(total).toLocaleString();
+
+    var section = document.getElementById('billing-section');
+    section.style.display = 'block';
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Billing form submission — redirect to WooCommerce checkout
+  document.getElementById('billing-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var fname = document.getElementById('fname').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var billingStreet = document.getElementById('billing-street').value.trim();
+    var billingCity = document.getElementById('billing-city').value.trim();
+    var billingState = document.getElementById('billing-state').value.trim();
+    var billingZip = document.getElementById('billing-zip').value.trim();
+
+    if (!fname || !email || !phone || !billingStreet || !billingCity || !billingState || !billingZip) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+
+    var variationId = document.getElementById('sel-variation').value;
+
+    // Store billing info for potential retrieval
+    var billingData = {
+      name: fname, email: email, phone: phone,
+      practice: document.getElementById('practice').value.trim(),
+      street: billingStreet, city: billingCity, state: billingState, zip: billingZip,
+      country: document.getElementById('billing-country').value
+    };
+    try { localStorage.setItem('mh_billing', JSON.stringify(billingData)); } catch(err) {}
+
+    // Redirect to WooCommerce — add to cart then checkout
+    window.location.href = 'https://mounthydra.us/checkout/?add-to-cart=' + variationId;
+  });
+</script>
 
 </body>
 </html>
