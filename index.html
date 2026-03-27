@@ -296,11 +296,30 @@
     var role = document.getElementById('role').value;
     if (!fname || !email || !practice || !role) { alert('Please fill in all required fields.'); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
-    var lead = { timestamp: new Date().toISOString(), name: fname, email: email, phone: document.getElementById('phone').value.trim(), practice: practice, role: role, source: 'Biohacker World 2026' };
+    var phone = document.getElementById('phone').value.trim();
+    var lead = { timestamp: new Date().toISOString(), name: fname, email: email, phone: phone, practice: practice, role: role, source: 'Biohacker World 2026' };
     console.log('Lead captured:', JSON.stringify(lead, null, 2));
-    try { var leads = JSON.parse(sessionStorage.getItem('mh_leads') || '[]'); leads.push(lead); sessionStorage.setItem('mh_leads', JSON.stringify(leads)); } catch(err) {}
+    try { var leads = JSON.parse(localStorage.getItem('mh_leads') || '[]'); leads.push(lead); localStorage.setItem('mh_leads', JSON.stringify(leads)); } catch(err) {}
+
+    // Send lead to GHL webhook (if configured)
+    var ghlWebhookUrl = localStorage.getItem('mh_ghl_webhook') || '';
+    if (ghlWebhookUrl) {
+      fetch(ghlWebhookUrl, {
+        method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          first_name: fname.split(' ')[0],
+          last_name: fname.split(' ').slice(1).join(' '),
+          email: email, phone: phone,
+          company_name: practice,
+          tags: ['biohacker-world-2026', 'conference-lead'],
+          source: 'Biohacker World Conference Landing Page'
+        })
+      }).catch(function() {});
+    }
+
     // Pass lead info to pricing page via URL params
-    var params = new URLSearchParams({name: fname, email: email, phone: document.getElementById('phone').value.trim(), practice: practice, role: role});
+    var params = new URLSearchParams({name: fname, email: email, phone: phone, practice: practice, role: role});
     window.location.href = 'pricing.html?' + params.toString();
   });
 </script>
