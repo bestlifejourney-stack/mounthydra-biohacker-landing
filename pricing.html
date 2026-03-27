@@ -32,13 +32,12 @@
     .section { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
     .section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
 
-    .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 640px) { .pricing-grid { grid-template-columns: repeat(2, 1fr); } }
+    .pricing-grid { display: grid; grid-template-columns: 1fr; gap: 24px; max-width: 500px; margin: 0 auto; }
 
     .pricing-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px; padding: 32px 28px; position: relative; overflow: hidden; }
     .pricing-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-dim), var(--gold)); }
     .pricing-card.featured { border-color: var(--gold); }
-    .pricing-card.featured::after { content: 'RECOMMENDED'; position: absolute; top: 14px; right: -28px; background: var(--gold); color: var(--navy); font-size: 9px; font-weight: 800; letter-spacing: 0.1em; padding: 3px 32px; transform: rotate(45deg); }
+    /* No ribbon needed — single product */
 
     .product-tag { display: inline-block; background: rgba(212,175,55,0.1); color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px; margin-bottom: 14px; }
     .product-img-wrap { text-align: center; margin-bottom: 16px; }
@@ -132,56 +131,8 @@
 <section class="section">
   <div class="pricing-grid">
 
-    <!-- CORE -->
-    <div class="pricing-card">
-      <span class="product-tag">Step 1</span>
-      <div class="product-img-wrap">
-        <img src="images/core-vial.png" alt="3D Exo+ Core vial" />
-      </div>
-      <div class="product-name">3D Exo+ Core</div>
-      <div class="product-base-price">$350</div>
-      <div class="product-base-label">per vial · single unit</div>
-
-      <div class="qty-options">
-        <label class="qty-option" onclick="selectQty(this)">
-          <input type="radio" name="core-qty" value="3" data-product="core" data-total="945" data-per="315" />
-          <div class="qty-details">
-            <div class="qty-label">3 vials</div>
-            <div class="qty-discount">10% off</div>
-          </div>
-          <div class="qty-price">
-            <div class="qty-total">$945</div>
-            <div class="qty-per-unit">$315/vial</div>
-          </div>
-        </label>
-        <label class="qty-option" onclick="selectQty(this)">
-          <input type="radio" name="core-qty" value="5" data-product="core" data-total="1488" data-per="297.50" />
-          <div class="qty-details">
-            <div class="qty-label">5 vials</div>
-            <div class="qty-discount">15% off</div>
-          </div>
-          <div class="qty-price">
-            <div class="qty-total">$1,488</div>
-            <div class="qty-per-unit">$297.50/vial</div>
-          </div>
-        </label>
-        <label class="qty-option" onclick="selectQty(this)">
-          <input type="radio" name="core-qty" value="10" data-product="core" data-total="2625" data-per="262.50" />
-          <div class="qty-details">
-            <div class="qty-label">10 vials</div>
-            <div class="qty-discount">25% off</div>
-          </div>
-          <div class="qty-price">
-            <div class="qty-total">$2,625</div>
-            <div class="qty-per-unit">$262.50/vial</div>
-          </div>
-        </label>
-      </div>
-      <button class="place-order-btn" onclick="orderProduct('core')">Place Order →</button>
-    </div>
-
     <!-- CORE + SHIELD -->
-    <div class="pricing-card featured">
+    <div class="pricing-card featured" style="max-width:480px; margin:0 auto;">
       <span class="product-tag">Step 1 + 2 — Best Value</span>
       <div class="product-img-wrap">
         <img src="images/core-vial.png" alt="3D Exo+ Core vial" style="max-height:120px;" />
@@ -226,7 +177,7 @@
           </div>
         </label>
       </div>
-      <button class="place-order-btn" onclick="orderProduct('core-shield')">Place Order →</button>
+      <button class="place-order-btn" onclick="orderProduct()">Place Order</button>
     </div>
 
   </div>
@@ -368,12 +319,6 @@
   if (params.get('phone')) document.getElementById('phone').value = params.get('phone');
   if (params.get('practice')) document.getElementById('practice').value = params.get('practice');
 
-  // Pre-select product if passed
-  var preselect = params.get('interest') || '';
-  if (preselect.toLowerCase().includes('core + shield') || preselect.toLowerCase().includes('core-shield')) {
-    // Will be handled by orderProduct call
-  }
-
   // Radio button selection highlighting
   function selectQty(el) {
     var card = el.closest('.pricing-card');
@@ -382,15 +327,15 @@
   }
 
   // Order product button
-  function orderProduct(product) {
-    var radioName = product === 'core' ? 'core-qty' : 'shield-qty';
-    var selected = document.querySelector('input[name="' + radioName + '"]:checked');
+  function orderProduct() {
+    var selected = document.querySelector('input[name="shield-qty"]:checked');
     if (!selected) { alert('Please select a quantity first.'); return; }
 
     var qty = selected.value;
     var total = selected.dataset.total;
-    var productName = product === 'core' ? '3D Exo+ Core' : '3D Exo+ Core + Shield';
-    var unitLabel = product === 'core' ? 'vials' : 'sets';
+    var productName = '3D Exo+ Core + Shield';
+    var unitLabel = 'sets';
+    var product = 'core-shield';
 
     // Set hidden fields
     document.getElementById('sel-product').value = product;

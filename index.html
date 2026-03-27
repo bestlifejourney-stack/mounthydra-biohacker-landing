@@ -154,38 +154,22 @@
 <!-- PRODUCTS -->
 <section class="section">
   <div class="section-label">Products</div>
-  <h2 class="section-title">Two Products. One Sequential Protocol.</h2>
+  <h2 class="section-title">The Complete Sequential Protocol</h2>
   <div class="products-grid">
 
-    <div class="product-card">
-      <span class="product-tag">Step 1</span>
-      <div class="product-img-wrap">
-        <img src="images/core-vial.png" alt="3D Exo+ Core vial" />
-      </div>
-      <div class="product-name">3D Exo+ Core</div>
-      <div class="product-desc">Active biological signal modulator. MSC-derived concentrate from 3D bioreactor conditioned medium. Reactivates cellular stress response and drives biological readiness.</div>
-      <div class="product-packs">
-        <span class="pack-badge">3 vials</span>
-        <span class="pack-badge">5 vials</span>
-        <span class="pack-badge">10 vials</span>
-      </div>
-      <div style="margin-top:18px;"><a href="pricing.html" class="btn-primary" style="font-size:14px; padding:12px 24px;">View Pricing & Order →</a></div>
-    </div>
-
-    <div class="product-card featured">
-      <span class="product-tag">Step 1 + 2 — Best Value</span>
+    <div class="product-card featured" style="max-width:500px; margin:0 auto;">
+      <span class="product-tag">The Complete Sequential Protocol</span>
       <div class="product-img-wrap">
         <img src="images/core-vial.png" alt="3D Exo+ Core vial" style="max-height:160px;" />
         <img src="images/shield-vial.png" alt="3D Exo+ Shield vial" style="max-height:160px; margin-left: -20px;" />
       </div>
       <div class="product-name">3D Exo+ Core + Shield</div>
-      <div class="product-desc">The complete sequential protocol. Core creates biological readiness. Shield — with PDRN, Hyaluronic Acid & GHK-Cu — converts it into measurable repair. Maximum clinical outcome.</div>
+      <div class="product-desc">Core creates biological readiness through active signaling — not passive antioxidant activity. Shield — with PDRN, Hyaluronic Acid & GHK-Cu — converts it into measurable repair. Maximum clinical outcome.</div>
       <div class="product-packs">
         <span class="pack-badge">3 sets</span>
         <span class="pack-badge">5 sets</span>
         <span class="pack-badge">10 sets</span>
       </div>
-      <div style="margin-top:18px;"><a href="pricing.html" class="btn-primary" style="font-size:14px; padding:12px 24px;">View Pricing & Order →</a></div>
     </div>
 
   </div>
@@ -270,31 +254,20 @@
             <input type="text" id="practice" name="practice" placeholder="Renew Wellness Clinic" required />
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="role">Your Role *</label>
-            <select id="role" name="role" required>
-              <option value="" disabled selected>Select role…</option>
-              <option>Dermatologist</option>
-              <option>Esthetician</option>
-              <option>Clinic Owner</option>
-              <option>Practitioner</option>
-              <option>Wellness Center</option>
-              <option>Distributor</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="interest">Interested In *</label>
-            <select id="interest" name="interest" required>
-              <option value="" disabled selected>Select product…</option>
-              <option>3D Exo+ Core only</option>
-              <option>3D Exo+ Core + Shield</option>
-              <option>Both — want to compare</option>
-            </select>
-          </div>
+        <div class="form-group">
+          <label for="role">Your Role *</label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select role…</option>
+            <option>Dermatologist</option>
+            <option>Esthetician</option>
+            <option>Clinic Owner</option>
+            <option>Practitioner</option>
+            <option>Wellness Center</option>
+            <option>Distributor</option>
+            <option>Other</option>
+          </select>
         </div>
-        <button type="submit" class="btn-form">Request Pricing Sheet →</button>
+        <button type="submit" class="btn-form">View Conference Pricing →</button>
         <p class="form-privacy">🔒 Your info is private. No spam, ever.</p>
       </form>
     </div>
@@ -322,14 +295,13 @@
     var email = document.getElementById('email').value.trim();
     var practice = document.getElementById('practice').value.trim();
     var role = document.getElementById('role').value;
-    var interest = document.getElementById('interest').value;
-    if (!fname || !email || !practice || !role || !interest) { alert('Please fill in all required fields.'); return; }
+    if (!fname || !email || !practice || !role) { alert('Please fill in all required fields.'); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
-    var lead = { timestamp: new Date().toISOString(), name: fname, email: email, phone: document.getElementById('phone').value.trim(), practice: practice, role: role, interest: interest, source: 'Biohacker World 2026' };
+    var lead = { timestamp: new Date().toISOString(), name: fname, email: email, phone: document.getElementById('phone').value.trim(), practice: practice, role: role, source: 'Biohacker World 2026' };
     console.log('Lead captured:', JSON.stringify(lead, null, 2));
     try { var leads = JSON.parse(sessionStorage.getItem('mh_leads') || '[]'); leads.push(lead); sessionStorage.setItem('mh_leads', JSON.stringify(leads)); } catch(err) {}
     // Pass lead info to pricing page via URL params
-    var params = new URLSearchParams({name: fname, email: email, phone: document.getElementById('phone').value.trim(), practice: practice, interest: interest});
+    var params = new URLSearchParams({name: fname, email: email, phone: document.getElementById('phone').value.trim(), practice: practice, role: role});
     window.location.href = 'pricing.html?' + params.toString();
   });
 </script>
