@@ -192,8 +192,8 @@
     </div>
 
     <div style="background:var(--navy-light); border:1px solid var(--border); border-radius:16px; padding:40px 32px;">
-      <div style="font-size:22px; font-weight:700; margin-bottom:6px;">Billing Details</div>
-      <p style="font-size:14px; color:var(--gray); margin-bottom:28px;">Enter your billing address. You'll choose a payment method on the next page.</p>
+      <div style="font-size:22px; font-weight:700; margin-bottom:6px;">Your Details</div>
+      <p style="font-size:14px; color:var(--gray); margin-bottom:28px;">Confirm your details, then proceed to our secure checkout to complete payment.</p>
 
       <form id="billing-form" novalidate>
         <input type="hidden" id="sel-variation" />
@@ -343,17 +343,46 @@
 
     var variationId = document.getElementById('sel-variation').value;
 
-    // Store billing info for potential retrieval
-    var billingData = {
-      name: fname, email: email, phone: phone,
-      practice: document.getElementById('practice').value.trim(),
-      street: billingStreet, city: billingCity, state: billingState, zip: billingZip,
-      country: document.getElementById('billing-country').value
-    };
-    try { localStorage.setItem('mh_billing', JSON.stringify(billingData)); } catch(err) {}
+    // Split name into first/last
+    var nameParts = fname.split(' ');
+    var firstName = nameParts[0] || '';
+    var lastName = nameParts.slice(1).join(' ') || '';
 
-    // Redirect to WooCommerce — add to cart then checkout
-    window.location.href = 'https://mounthydra.us/checkout/?add-to-cart=' + variationId;
+    // Determine shipping address
+    var sameAddr = document.getElementById('same-address').checked;
+    var shipStreet = sameAddr ? billingStreet : (document.getElementById('shipping-street').value.trim() || billingStreet);
+    var shipCity = sameAddr ? billingCity : (document.getElementById('shipping-city').value.trim() || billingCity);
+    var shipState = sameAddr ? billingState : (document.getElementById('shipping-state').value.trim() || billingState);
+    var shipZip = sameAddr ? billingZip : (document.getElementById('shipping-zip').value.trim() || billingZip);
+    var shipCountry = sameAddr ? document.getElementById('billing-country').value : (document.getElementById('shipping-country').value || 'United States');
+
+    // Build WooCommerce checkout URL with pre-filled billing & shipping fields
+    var checkoutParams = new URLSearchParams({
+      'add-to-cart': variationId,
+      // Billing
+      'billing_first_name': firstName,
+      'billing_last_name': lastName,
+      'billing_company': document.getElementById('practice').value.trim(),
+      'billing_email': email,
+      'billing_phone': phone,
+      'billing_address_1': billingStreet,
+      'billing_city': billingCity,
+      'billing_state': billingState,
+      'billing_postcode': billingZip,
+      'billing_country': 'US',
+      // Shipping
+      'shipping_first_name': firstName,
+      'shipping_last_name': lastName,
+      'shipping_company': document.getElementById('practice').value.trim(),
+      'shipping_address_1': shipStreet,
+      'shipping_city': shipCity,
+      'shipping_state': shipState,
+      'shipping_postcode': shipZip,
+      'shipping_country': 'US'
+    });
+
+    // Redirect to WooCommerce — add to cart (goes to cart page, then checkout)
+    window.location.href = 'https://mounthydra.us/?add-to-cart=' + variationId;
   });
 </script>
 
