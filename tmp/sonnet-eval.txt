@@ -1,0 +1,83 @@
+I'll analyze this stem cell/exosome company's website content for FDA compliance issues. Based on the claims you've provided, there are several significant regulatory concerns.
+
+## HIGH SEVERITY ISSUES
+
+### 1. **Drug Claims While Marketing as "Cosmetic/Research Only"**
+**Problematic Language:**
+- "promoting regeneration, reducing inflammation, and modulating the immune system"
+- "molecules for healing and immune support"
+- "Improved clinical performance and outcomes"
+- "faster recovery and better results"
+
+**Issue:** These are clear drug claims (treating inflammation, affecting immune function, promoting healing) that trigger FDA drug regulations, contradicting the "cosmetic use" and "research use only" disclaimers.
+
+**Risk:** Products making drug claims are regulated as drugs regardless of labeling.
+
+**Recommended Fix:** Remove all therapeutic, healing, and medical outcome claims OR register as investigational drugs.
+
+### 2. **Misleading FDA Registration Claims**
+**Problematic Language:**
+- "FDA (with Type II Drug Master File) Certified cell line"
+- "Registered with an FDA Master File"
+
+**Issue:** FDA doesn't "certify" cell lines. Drug Master Files are confidential submissions that don't constitute FDA approval or certification.
+
+**Risk:** Misrepresenting FDA relationship is a federal offense.
+
+**Recommended Fix:** Change to "Cell line information filed with FDA Drug Master File" or remove entirely.
+
+## MEDIUM SEVERITY ISSUES
+
+### 3. **Structure/Function Claims Beyond Cosmetic Scope**
+**Problematic Language:**
+- "trigger collagen and elastin production"
+- "Rejuvenate skin naturally"
+- "faster-healing skin"
+
+**Issue:** Even cosmetics cannot claim to affect skin structure or healing processes.
+
+**Recommended Fix:** Limit to appearance claims only: "may improve skin appearance" or "supports skin's natural look."
+
+### 4. **Clinical Outcome Claims Without Substantiation**
+**Problematic Language:**
+- "Clinics report faster recovery and better results with fewer sessions"
+- "Trusted Worldwide by 200+ Premium Clinics"
+
+**Issue:** Clinical outcome claims require clinical evidence. FTC requires substantiation for numerical claims.
+
+**Risk:** FTC enforcement for unsubstantiated claims.
+
+**Recommended Fix:** Provide clinical data or remove claims. For clinic numbers, ensure documentation exists.
+
+### 5. **"Clinical-Grade" Terminology**
+**Problematic Language:**
+- "clinical-grade, GMP products"
+- "engineered for clinical and research excellence"
+
+**Issue:** "Clinical-grade" implies medical use, contradicting cosmetic/research classification.
+
+**Recommended Fix:** Use "laboratory-grade" or "research-grade" instead.
+
+## LOW SEVERITY ISSUES
+
+### 6. **Gating Strategy Concerns**
+**Issue:** "Health and Wellness Professionals only" gating suggests medical use but may not provide adequate regulatory protection.
+
+**Recommended Fix:** Clearly define intended professional users and ensure all marketing aligns with stated use.
+
+## CLASSIFICATION RISK ANALYSIS
+
+**Current Classification Issues:**
+- Products appear to be **illegally marketed drugs** based on therapeutic claims
+- "Cosmetic" and "Research Use Only" labels don't protect against drug classification when making drug claims
+- FDA will classify based on **intended use** as evidenced by marketing claims, not disclaimers
+
+## IMMEDIATE COMPLIANCE RECOMMENDATIONS
+
+1. **Remove all therapeutic/drug claims** from marketing materials
+2. **Correct FDA registration misrepresentations**
+3. **Align marketing with intended classification** (cosmetic OR research only)
+4. **Implement compliance review process** for all marketing content
+5. **Consider 510(k) or IND pathway** if therapeutic uses are intended
+
+**Overall Risk Level: HIGH** - Multiple drug claims combined with FDA misrepresentation create significant enforcement risk.

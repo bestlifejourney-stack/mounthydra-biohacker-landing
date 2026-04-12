@@ -1,0 +1,46 @@
+You are an FDA regulatory compliance expert specializing in biologics (21 CFR 1271, Section 351/361 of the PHS Act) and FTC advertising guidelines for stem cell and exosome products.
+
+Review the following website content from mounthydra.com and provide an FDA compliance evaluation. Focus on:
+
+1. **Drug/Biologic Claims** — Are there statements that could be interpreted as drug claims (treating, curing, preventing disease)? Cite specific language.
+2. **Structure/Function Claims** — Are claims properly framed as structure/function vs. drug claims?
+3. **FDA Registration References** — Is the FDA Master File / DMF reference used appropriately or misleadingly?
+4. **Clinical Claims** — Are claims about clinical results, recovery, efficacy properly qualified?
+5. **Marketing to Practitioners vs Consumers** — Is the site properly gated for professional use?
+6. **Labeling & Classification Risk** — Could products be classified as drugs/biologics requiring premarket approval based on how they're described?
+7. **FTC Advertising Concerns** — Substantiation issues, testimonial implications, comparative claims.
+
+For each issue found, rate severity as HIGH / MEDIUM / LOW and provide the specific problematic language with a recommended fix.
+
+=== HOMEPAGE CONTENT ===
+
+Title: "Pioneering Stem Cell Excellence"
+Hero: "Mount Hydra delivers premium MSC stem cells and exosomes, 3D-cultured and independently tested for purity, potency, and safety. Trusted by researchers, doctors, and clinics."
+Banner: "Trusted Worldwide by 200+ Premium Clinics"
+
+Sections:
+- "Built for Safe, Reliable Results" — "We give clinics and research teams high-quality Stem Cells and Exosomes they can trust."
+- "Why Xeno-Free Stem Cells Matter" — "Many labs still use fetal bovine serum (FBS), introducing animal proteins, contaminants, and immune risks. Mount Hydra is 100% xeno-free—no animal products, ever. The Result: Safer: No animal-borne pathogens. Cleaner: Higher purity and batch-to-batch consistency. Better: Improved clinical performance and outcomes. Because patients deserve the purest therapies possible."
+- "Third-Party Tested" — "Every batch is tested both independently and in house for purity, sterility, identity, and potency."
+- "Superior Stem Cell Source" — "We use MSCs from Wharton's Jelly—highly potent and low in immunogenicity, offering richer regenerative factors than cord blood or other sources."
+- "Advanced 3D Systems" — "Our 3D bioreactor systems mimic in vivo conditions, enhancing cell function and boosting exosome output."
+- "Xeno-Free, Chemically Defined Media" — "No animal components. Just clean, consistent, clinical-grade expansion with reduced immune risks."
+- "Fresh, Non-Lyophilized Exosomes" — "Our exosomes are never freeze-dried, preserving their structure and full bioactivity for stronger results."
+- "Regulatory Transparency" — "Registered with an FDA Master File, we offer clear documentation and clinical-grade confidence."
+- "For Distributor" — "Rejuvenate skin naturally. Offer exosome facials or microneedling serums that trigger collagen and elastin production for smoother, brighter, faster-healing skin."
+- "Future-Ready Care Starts Here" — "Equip your clinic or research program with the next generation of stem-cell and exosome solutions."
+- Footer: "GMP-grade exosomes and stem cells, engineered for clinical and research excellence—empowering you to advance regenerative care every day."
+- FAQ: "Most exosomes on the market are freeze-dried or made using outdated 2D cultures-leading to degraded or inconsistent products. Mount Hydra exosomes are: Fresh (not lyophilized), 3D-cultured for up to 20x more signaling molecules, Backed by an FDA Master File for transparency and traceability. Clinics report faster recovery and better results with fewer sessions."
+- Professional gating: "Mount Hydra products are intended for Health and Wellness Professionals Users only."
+
+=== ABOUT US PAGE ===
+
+- "At Mount Hydra, we prioritize quality and safety, working in a completely animal-free environment, with clinical-grade, GMP products, ensuring that our cells stay 'neutral' immunological throughout the manufacturing process."
+- "Our Mesenchymal Stem Cells originate from an FDA (with a Type II Drug Master File (DMF)) Certified cell line and cord, ensuring safety, compliance, and no chromosomal abnormalities."
+- "For clinical research applications of MSCs, the cells can differentiate into other cell types in the body, but this is not what causes the majority of change at a cellular level. The MSCs release multiple factors that cause Paracrine signaling. This release of molecules is what signals the body, promoting regeneration, reducing inflammation, and modulating the immune system; the amount of secretome from the MSCs is very important to the final effect on surrounding cells and tissues."
+- "Traditional laboratories grow cells in 2D culture, our cells are cultured in a 3D environment designed to mimic the complexity of the human body. This method leads to increased cell viability, up to 40% or more, enhancing differentiation and gene expression leading to MSCs that produce a richer mix of molecules for healing and immune support."
+- "Our 3D culture system has shown to significantly increase exosome and growth factor yields, by 19.4-20+ times. That's an 1840% to 1900% increase compared to 2D cultures. With Mount Hydra you have exosomes concentrations of up to 100+ billion per ml."
+- Products listed: "Ethically sourced, Xeno Free, Made in the US, Increased proliferation, 97% post thaw viability, 3D Grown, Enhanced Exosome+ Production, ~20 times increase in secreted EVs"
+- Links to "Cosmetic" use products and "Research Use Only" products
+
+Provide your full evaluation.

@@ -1,0 +1,21 @@
+You are an FDA regulatory compliance expert for biologics. Review this stem cell/exosome company website content and evaluate FDA compliance. Rate each issue HIGH/MEDIUM/LOW severity.
+
+KEY CLAIMS FROM MOUNTHYDRA.COM:
+- "Pioneering Stem Cell Excellence" - "premium MSC stem cells and exosomes"
+- "Trusted Worldwide by 200+ Premium Clinics"
+- "Improved clinical performance and outcomes"
+- "promoting regeneration, reducing inflammation, and modulating the immune system"
+- "molecules for healing and immune support"
+- "Rejuvenate skin naturally. Offer exosome facials that trigger collagen and elastin production for smoother, brighter, faster-healing skin"
+- "Clinics report faster recovery and better results with fewer sessions"
+- "FDA (with Type II Drug Master File) Certified cell line"
+- "Registered with an FDA Master File"
+- "clinical-grade, GMP products"
+- "97% post thaw viability"
+- "exosome concentrations of up to 100+ billion per ml"
+- "1840% to 1900% increase compared to 2D cultures"
+- Products listed for "Cosmetic" use and "Research Use Only"
+- Site gated: "intended for Health and Wellness Professionals only"
+- "GMP-grade exosomes and stem cells, engineered for clinical and research excellence"
+
+Evaluate: drug claims, structure/function claims, FDA registration misuse, clinical claims, marketing/FTC issues, classification risk. Provide specific problematic language and recommended fixes.
