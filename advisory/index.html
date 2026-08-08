@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todd Tzeng — Founder Advisory, Masterminds &amp; Board Service</title>
+  <meta name="description" content="Todd Tzeng: 30+ years, ten startup and turnaround companies, two NASDAQ listings, $2B+ in shareholder value. Founder advisory, masterminds, and board of director engagements." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --paper: #f3f2ec;
+      --paper-raised: #ecebe3;
+      --ink: #1a231e;
+      --ink-soft: #4c554f;
+      --ink-faint: #767f78;
+      --ledger: #1f5c40;
+      --ledger-bright: #2e7a56;
+      --rule: #c9cabf;
+      --rule-strong: #1a231e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --paper: #131a16;
+        --paper-raised: #1a231e;
+        --ink: #e8e7de;
+        --ink-soft: #b0b3a8;
+        --ink-faint: #7f867f;
+        --ledger: #6fbf95;
+        --ledger-bright: #8ed4ac;
+        --rule: #2c352f;
+        --rule-strong: #e8e7de;
+      }
+    }
+    :root[data-theme="dark"] {
+      --paper: #131a16;
+      --paper-raised: #1a231e;
+      --ink: #e8e7de;
+      --ink-soft: #b0b3a8;
+      --ink-faint: #7f867f;
+      --ledger: #6fbf95;
+      --ledger-bright: #8ed4ac;
+      --rule: #2c352f;
+      --rule-strong: #e8e7de;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mono {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    .page { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- Masthead ---------- */
+    header.masthead {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 26px 0 18px; border-bottom: 2px solid var(--rule-strong);
+    }
+    .masthead-name {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
+      color: var(--ink);
+    }
+    .masthead-note {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px; letter-spacing: 0.08em; color: var(--ink-faint); text-transform: uppercase;
+    }
+    @media (max-width: 560px) { .masthead-note { display: none; } }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 72px 0 56px; }
+    .hero-eyebrow {
+      font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--ledger); font-weight: 600; margin-bottom: 26px;
+    }
+    .hero h1 {
+      font-size: clamp(34px, 6.4vw, 62px);
+      font-weight: 400; line-height: 1.12; letter-spacing: -0.012em;
+      text-wrap: balance; max-width: 17em;
+    }
+    .hero h1 em { font-style: italic; color: var(--ledger); }
+    .hero-sub {
+      margin-top: 28px; max-width: 34em;
+      font-size: clamp(17px, 2.2vw, 20px); line-height: 1.6; color: var(--ink-soft);
+    }
+    .hero-cta-row { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      display: inline-block; text-decoration: none; cursor: pointer;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600;
+      padding: 14px 26px; border: 1.5px solid var(--ink); color: var(--ink);
+      background: transparent; transition: background 0.18s, color 0.18s;
+    }
+    .btn:hover, .btn:focus-visible { background: var(--ink); color: var(--paper); }
+    .btn.solid { background: var(--ledger); border-color: var(--ledger); color: var(--paper); }
+    .btn.solid:hover, .btn.solid:focus-visible { background: var(--ledger-bright); border-color: var(--ledger-bright); }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--ledger); outline-offset: 3px; }
+
+    /* ---------- Ledger stat strip ---------- */
+    .ledger-box { border-top: 2px solid var(--rule-strong); padding: 30px 0 8px; }
+    .ledger-caption {
+      font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--ink-faint); margin-bottom: 18px; font-weight: 600;
+    }
+    .ledger-line {
+      display: flex; align-items: baseline; gap: 10px;
+      padding: 9px 0; border-bottom: 1px solid var(--rule);
+      font-size: 15.5px;
+    }
+    .ledger-line:last-child { border-bottom: none; }
+    .ledger-label { color: var(--ink-soft); white-space: nowrap; }
+    .ledger-dots {
+      flex: 1; min-width: 24px;
+      border-bottom: 1.5px dotted var(--ink-faint);
+      transform: translateY(-4px);
+    }
+    .ledger-value {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+      font-variant-numeric: tabular-nums;
+      font-weight: 700; font-size: 17px; color: var(--ledger); white-space: nowrap;
+    }
+
+    /* ---------- Section scaffold: label rail + content ---------- */
+    section.entry { border-top: 1px solid var(--rule); padding: 56px 0; }
+    .entry-grid { display: grid; grid-template-columns: 180px 1fr; gap: 32px; }
+    @media (max-width: 720px) { .entry-grid { grid-template-columns: 1fr; gap: 14px; } }
+    .entry-label {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase;
+      font-weight: 700; color: var(--ledger); padding-top: 6px;
+    }
+    .entry-body h2 {
+      font-size: clamp(24px, 3.6vw, 34px); font-weight: 400; line-height: 1.22;
+      letter-spacing: -0.008em; margin-bottom: 20px; text-wrap: balance;
+    }
+    .entry-body p { max-width: 38em; color: var(--ink-soft); margin-bottom: 16px; }
+    .entry-body p strong { color: var(--ink); font-weight: 600; }
+    .entry-body p:last-child { margin-bottom: 0; }
+
+    /* ---------- Engagements ---------- */
+    .engagements { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 2px solid var(--rule-strong); }
+    .engagement {
+      display: grid; grid-template-columns: 200px 1fr; gap: 28px;
+      padding: 30px 0; border-bottom: 1px solid var(--rule);
+    }
+    @media (max-width: 720px) { .engagement { grid-template-columns: 1fr; gap: 8px; } }
+    .engagement h3 { font-size: 22px; font-weight: 600; line-height: 1.3; }
+    .engagement h3 .tagline {
+      display: block; font-size: 13px; font-weight: 400; font-style: italic;
+      color: var(--ledger); margin-top: 6px;
+    }
+    .engagement-desc { color: var(--ink-soft); font-size: 16px; max-width: 36em; }
+    .engagement-desc ul { list-style: none; margin-top: 12px; }
+    .engagement-desc li {
+      padding: 5px 0 5px 22px; position: relative; font-size: 15px;
+    }
+    .engagement-desc li::before {
+      content: '—'; position: absolute; left: 0; color: var(--ledger); font-weight: 600;
+    }
+
+    /* ---------- Principles ---------- */
+    .principles { display: grid; grid-template-columns: 1fr; gap: 26px; max-width: 40em; }
+    .principle blockquote {
+      font-size: clamp(19px, 2.6vw, 24px); font-style: italic; line-height: 1.4;
+      color: var(--ink); border-left: 3px solid var(--ledger); padding-left: 20px;
+      text-wrap: balance;
+    }
+    .principle p { margin-top: 10px; padding-left: 23px; color: var(--ink-soft); font-size: 15.5px; max-width: 34em; }
+
+    /* ---------- Holdings ---------- */
+    .holdings { border-top: 2px solid var(--rule-strong); }
+    .holding {
+      display: flex; align-items: baseline; gap: 10px;
+      padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 15.5px;
+    }
+    .holding-name { font-weight: 600; color: var(--ink); white-space: nowrap; }
+    .holding-dots { flex: 1; min-width: 24px; border-bottom: 1.5px dotted var(--ink-faint); transform: translateY(-4px); }
+    .holding-role {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12.5px; letter-spacing: 0.04em; color: var(--ink-soft); text-align: right;
+    }
+    @media (max-width: 560px) {
+      .holding { flex-direction: column; gap: 2px; }
+      .holding-dots { display: none; }
+      .holding-role { text-align: left; }
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-block { background: var(--paper-raised); border: 1px solid var(--rule); padding: 44px 38px; }
+    @media (max-width: 560px) { .contact-block { padding: 32px 22px; } }
+    .contact-block h2 { font-size: clamp(24px, 3.4vw, 32px); font-weight: 400; margin-bottom: 14px; text-wrap: balance; }
+    .contact-block p { color: var(--ink-soft); max-width: 36em; margin-bottom: 26px; }
+    .contact-links { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    footer {
+      border-top: 2px solid var(--rule-strong); margin-top: 72px; padding: 26px 0 48px;
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11.5px; letter-spacing: 0.06em; color: var(--ink-faint); text-transform: uppercase;
+    }
+    footer a { color: var(--ink-soft); text-decoration: none; }
+    footer a:hover { color: var(--ledger); }
+
+    /* ---------- Motion ---------- */
+    @media (prefers-reduced-motion: no-preference) {
+      .hero > *, .ledger-box { animation: rise 0.7s ease both; }
+      .hero-sub { animation-delay: 0.08s; }
+      .hero-cta-row { animation-delay: 0.16s; }
+      .ledger-box { animation-delay: 0.26s; }
+      @keyframes rise {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: none; }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="masthead">
+      <span class="masthead-name">Todd Tzeng</span>
+      <span class="masthead-note mono">Founder Advisory · Masterminds · Board Service</span>
+    </header>
+
+    <section class="hero">
+      <p class="hero-eyebrow mono">A letter of record</p>
+      <h1>Thirty years in the operator's seat. Ten companies. <em>Now I sit on your side of the table.</em></h1>
+      <p class="hero-sub">
+        I advise founders, chair masterminds, and serve on boards — drawing on a career of
+        building, turning around, and selling companies, and on the AI&#8209;native businesses
+        I still run today.
+      </p>
+      <div class="hero-cta-row">
+        <a class="btn solid" href="#contact">Start a conversation</a>
+        <a class="btn" href="#engagements">How I engage</a>
+      </div>
+    </section>
+
+    <div class="ledger-box" aria-label="Track record">
+      <p class="ledger-caption mono">Track record — statement of account</p>
+      <div class="ledger-line"><span class="ledger-label">Years operating</span><span class="ledger-dots" aria-hidden="true"></span><span class="ledger-value">30+</span></div>
+      <div class="ledger-line"><span class="ledger-label">Startup &amp; turnaround companies</span><span class="ledger-dots" aria-hidden="true"></span><span class="ledger-value">10</span></div>
+      <div class="ledger-line"><span class="ledger-label">Companies acquired</span><span class="ledger-dots" aria-hidden="true"></span><span class="ledger-value">5</span></div>
+      <div class="ledger-line"><span class="ledger-label">Taken public on NASDAQ</span><span class="ledger-dots" aria-hidden="true"></span><span class="ledger-value">2</span></div>
+      <div class="ledger-line"><span class="ledger-label">Shareholder value created</span><span class="ledger-dots" aria-hidden="true"></span><span class="ledger-value">$2B+</span></div>
+    </div>
+
+    <section class="entry" id="record">
+      <div class="entry-grid">
+        <div class="entry-label mono">The record</div>
+        <div class="entry-body">
+          <h2>Every lesson here was paid for at the operating level.</h2>
+          <p>
+            I've spent three decades in the chief executive's chair — growing, fixing, and selling
+            companies across software, healthcare technology, financial services technology, and
+            fulfillment. CEO of <strong>Why.com</strong> and <strong>bConnected Software</strong>,
+            Chairman &amp; President of <strong>Accupost</strong>, founder and CEO of
+            <strong>Falcon Fulfillment</strong>. Of the ten startup and turnaround companies I've
+            helped lead, five were acquired and two went public on NASDAQ before acquisition —
+            over $2&nbsp;billion in shareholder value created along the way.
+          </p>
+          <p>
+            Since 2005 I've been Managing Partner of <strong>Arilex Ventures</strong>, a private
+            holding company that acquires and operates businesses in health &amp; wellness,
+            healthcare technology, and financial technology.
+          </p>
+          <p>
+            I still operate. Today I own and run <strong>Mount Hydra</strong> (regenerative
+            medicine), <strong>SCEQL Labs</strong> (a bioscience laboratory in Irvine, California),
+            and <strong>3D Exosomes</strong> — a portfolio run by a lean human team and a working
+            AI agent workforce that handles finance, operations, and marketing execution.
+            When I advise on AI&#8209;native operations, it's from practice, not theory.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry" id="engagements">
+      <div class="entry-grid">
+        <div class="entry-label mono">Engagements</div>
+        <div class="entry-body">
+          <h2>Three ways to put this record to work.</h2>
+          <div class="engagements">
+            <div class="engagement">
+              <h3>Founder Advisory
+                <span class="tagline">One founder. One operator. No theater.</span>
+              </h3>
+              <div class="engagement-desc">
+                Ongoing 1:1 advisory for CEOs who want an operator across the table — someone who
+                has met payroll, restructured a company, raised capital, and signed the closing documents.
+                <ul>
+                  <li>Growth strategy and unit economics</li>
+                  <li>Turnarounds and operational resets</li>
+                  <li>Capital strategy and exit readiness</li>
+                  <li>Building AI&#8209;native operations that scale without headcount</li>
+                </ul>
+              </div>
+            </div>
+            <div class="engagement">
+              <h3>Masterminds
+                <span class="tagline">The room every founder is missing.</span>
+              </h3>
+              <div class="engagement-desc">
+                Small, curated groups of non-competing founders, chaired by an operator rather than
+                a facilitator. Real numbers on the table, candor over content, and accountability
+                between sessions.
+                <ul>
+                  <li>Peer cohorts matched by stage and stakes</li>
+                  <li>Operator-led working sessions, not lectures</li>
+                  <li>A standing board of peers for the years between exits</li>
+                </ul>
+              </div>
+            </div>
+            <div class="engagement">
+              <h3>Board Service
+                <span class="tagline">Governance from the operator's seat.</span>
+              </h3>
+              <div class="engagement-desc">
+                Independent director and advisory board engagements for companies that want
+                pattern recognition earned across ten companies, five acquisitions, and two
+                NASDAQ listings.
+                <ul>
+                  <li>Growth-stage and founder-led companies</li>
+                  <li>M&amp;A, capital events, and exit preparation</li>
+                  <li>Strongest fit: health &amp; wellness, healthcare technology, fintech, e&#8209;commerce &amp; fulfillment</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry" id="principles">
+      <div class="entry-grid">
+        <div class="entry-label mono">Operating principles</div>
+        <div class="entry-body">
+          <h2>The rules I run my own companies by.</h2>
+          <div class="principles">
+            <div class="principle">
+              <blockquote>"Never put a human in the path of execution."</blockquote>
+              <p>Automate relentlessly. People belong on judgment calls, not data entry. My own
+              companies run day-to-day on AI agents so the humans can think.</p>
+            </div>
+            <div class="principle">
+              <blockquote>"Have opinions. Flag risks. Don't be a yes&#8209;machine."</blockquote>
+              <p>An advisor who agrees with everything is a cost center. You're paying for the
+              disagreements.</p>
+            </div>
+            <div class="principle">
+              <blockquote>"Double-check the math."</blockquote>
+              <p>Every growth story is won or lost in the unit economics. I read the numbers
+              before I read the narrative.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry" id="holdings">
+      <div class="entry-grid">
+        <div class="entry-label mono">Current positions</div>
+        <div class="entry-body">
+          <h2>Where I operate today.</h2>
+          <div class="holdings">
+            <div class="holding"><span class="holding-name">Arilex Ventures</span><span class="holding-dots" aria-hidden="true"></span><span class="holding-role mono">Managing Partner · since 2005</span></div>
+            <div class="holding"><span class="holding-name">Mount Hydra</span><span class="holding-dots" aria-hidden="true"></span><span class="holding-role mono">Owner · regenerative medicine</span></div>
+            <div class="holding"><span class="holding-name">SCEQL Labs</span><span class="holding-dots" aria-hidden="true"></span><span class="holding-role mono">Owner · bioscience lab, Irvine CA</span></div>
+            <div class="holding"><span class="holding-name">3D Exosomes</span><span class="holding-dots" aria-hidden="true"></span><span class="holding-role mono">Owner · product science brand</span></div>
+            <div class="holding"><span class="holding-name">Best Life Journey</span><span class="holding-dots" aria-hidden="true"></span><span class="holding-role mono">Author · founder growth strategies</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="entry" id="contact">
+      <div class="entry-grid">
+        <div class="entry-label mono">Correspondence</div>
+        <div class="entry-body">
+          <div class="contact-block">
+            <h2>If you're carrying a company, let's talk.</h2>
+            <p>
+              Advisory, mastermind seats, and board engagements each open a few times a year.
+              Write a short note on where your company stands and what you're weighing —
+              I read every one and reply to the ones I can genuinely help.
+            </p>
+            <div class="contact-links">
+              <a class="btn solid" href="mailto:bestlifejourney@gmail.com?subject=Advisory%20inquiry%20—%20via%20toddtzeng%20page">Email Todd</a>
+              <a class="btn" href="https://www.linkedin.com/in/toddtzeng" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Todd Tzeng</span>
+      <span>Penn State · B.S. Finance</span>
+      <span><a href="https://bestlifejourney.com" rel="noopener">bestlifejourney.com</a></span>
+    </footer>
+
+  </div>
+</body>
+</html>
