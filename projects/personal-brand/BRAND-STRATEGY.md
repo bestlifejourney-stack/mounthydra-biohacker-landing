@@ -8,10 +8,10 @@
 ## 1. Positioning
 
 **One line:**
-> The operator who's done it ten times — and now runs his companies with an AI agent workforce.
+> The operator who's done it twelve times — and now runs his companies with an AI agent workforce.
 
 **Positioning statement:**
-Todd Tzeng is a 30-year operator-investor: ten startup and turnaround companies, five acquisitions, two NASDAQ listings, and over $2B in shareholder value created. Unlike career advisors and retired executives, Todd still operates — his current regenerative-medicine portfolio (Mount Hydra, SCEQL Labs, 3D Exosomes) runs on a lean human team plus a working AI agent workforce. He advises founders, chairs masterminds, and serves on boards from current practice, not nostalgia.
+Todd Tzeng is a 40-year operator-investor: twelve startup and turnaround companies, five acquisitions, two NASDAQ listings, and over $2B in shareholder value created. Unlike career advisors and retired executives, Todd still operates — his current regenerative-medicine portfolio (Mount Hydra, SCEQL Labs, 3D Exosomes) runs on a lean human team plus a working AI agent workforce. He advises founders, chairs masterminds, and serves on boards from current practice, not nostalgia.
 
 **Why this wins:**
 - *"Still in the arena"* beats *"used to be in the arena."* Most board candidates and CEO coaches trade on decades-old wins. Todd's AI-native operations are a live, differentiated proof point almost no one else his generation can claim.
@@ -39,7 +39,7 @@ Todd Tzeng is a 30-year operator-investor: ten startup and turnaround companies,
 ### Pillar 3 — Board of Director Engagements
 - **Who:** Growth-stage and founder-led companies; PE-backed operating companies; strongest fit in health & wellness, healthcare technology, fintech, e-commerce/fulfillment.
 - **What:** Independent director and advisory board seats; special utility around M&A, capital events, going-public readiness, and operational governance.
-- **Credential frame:** "Pattern recognition earned across ten companies, five acquisitions, and two NASDAQ listings."
+- **Credential frame:** "Pattern recognition earned across twelve companies, five acquisitions, and two NASDAQ listings."
 - **Channel:** LinkedIn presence + private-equity/board-recruiter network (Arilex relationships), not open inbound.
 
 **Pricing philosophy across all three:** scarce, senior, retainer-based. The brand should never signal hourly availability. (Clarity.fm/Startups.com listings are legacy channels — consider retiring or repointing them to the new page so the brand reads at board level.)
@@ -49,13 +49,13 @@ Todd Tzeng is a 30-year operator-investor: ten startup and turnaround companies,
 ## 3. Bios (ready to use)
 
 ### Short (≈40 words)
-Todd Tzeng is a 30-year operator and investor — ten startup and turnaround companies, five acquisitions, two NASDAQ listings, and $2B+ in shareholder value. He is Managing Partner of Arilex Ventures and advises founders on growth, turnarounds, and exits.
+Todd Tzeng is a 40-year operator and investor — twelve startup and turnaround companies, five acquisitions, two NASDAQ listings, and $2B+ in shareholder value. He is Managing Partner of Arilex Ventures and advises founders on growth, turnarounds, and exits.
 
 ### Medium (≈100 words)
-Todd Tzeng has spent three decades in the operator's seat. He has held leadership roles in ten startup and turnaround companies spanning software, healthcare technology, financial services technology, and fulfillment — including CEO of Why.com and bConnected Software, Chairman & President of Accupost, and founder/CEO of Falcon Fulfillment. Five of those companies were acquired; two went public on NASDAQ — over $2B in shareholder value created. Since 2005 he has been Managing Partner of Arilex Ventures, and today owns and operates Mount Hydra, SCEQL Labs, and 3D Exosomes — businesses run day-to-day by an AI agent workforce. He advises founders, chairs masterminds, and serves on boards.
+Todd Tzeng has spent four decades in the operator's seat. He has held leadership roles in twelve startup and turnaround companies spanning software, healthcare technology, financial services technology, and fulfillment — including CEO of Why.com and bConnected Software, Chairman & President of Accupost, and founder/CEO of Falcon Fulfillment. Five of those companies were acquired; two went public on NASDAQ — over $2B in shareholder value created. Since 2005 he has been Managing Partner of Arilex Ventures, and today owns and operates Mount Hydra, SCEQL Labs, and 3D Exosomes — businesses run day-to-day by an AI agent workforce. He advises founders, chairs masterminds, and serves on boards.
 
 ### Long (speaker/board bio, ≈180 words)
-Todd Tzeng is an operator-investor with more than thirty years of experience growing, turning around, and selling companies. Across ten startup and turnaround companies he has led every growth function — sales, marketing, finance, operations, and product — as CEO of Why.com and bConnected Software (healthcare business-process management), Chairman & President of Accupost (mortgage-services technology), and founder & CEO of Falcon Fulfillment. Five of those companies were acquired and two became NASDAQ-listed public companies prior to acquisition, generating more than $2 billion in shareholder value.
+Todd Tzeng is an operator-investor with more than forty years of experience growing, turning around, and selling companies. Across twelve startup and turnaround companies he has led every growth function — sales, marketing, finance, operations, and product — as CEO of Why.com and bConnected Software (healthcare business-process management), Chairman & President of Accupost (mortgage-services technology), and founder & CEO of Falcon Fulfillment. Five of those companies were acquired and two became NASDAQ-listed public companies prior to acquisition, generating more than $2 billion in shareholder value.
 
 Since 2005, Todd has served as Managing Partner of Arilex Ventures, a private holding company that acquires and operates businesses in health & wellness, healthcare technology, and financial technology. He currently owns and operates Mount Hydra (regenerative medicine), SCEQL Labs (a bioscience laboratory in Irvine, California), and 3D Exosomes — a portfolio notable for running on a lean human team supported by a working AI agent workforce. Todd advises founder/CEOs, chairs founder masterminds, and serves on boards of directors. He holds a B.S. in Finance from Penn State and writes at bestlifejourney.com.
 
@@ -64,10 +64,10 @@ Since 2005, Todd has served as Managing Partner of Arilex Ventures, a private ho
 ## 4. LinkedIn refresh
 
 **Headline (220 chars max):**
-> Founder Advisory · Masterminds · Board Service | 10 companies, 2 NASDAQ listings, $2B+ shareholder value | Managing Partner, Arilex Ventures | I run my companies with AI agent teams — and advise founders who want the same
+> Founder Advisory · Masterminds · Board Service | 12 companies, 2 NASDAQ listings, $2B+ shareholder value | Managing Partner, Arilex Ventures | I run my companies with AI agent teams — and advise founders who want the same
 
 **About section (first 3 lines are what shows before "…see more"):**
-> Thirty years in the operator's seat. Ten companies. Five acquisitions. Two NASDAQ listings. $2B+ in shareholder value.
+> Forty years in the operator's seat. Twelve companies. Five acquisitions. Two NASDAQ listings. $2B+ in shareholder value.
 >
 > Now I sit on the founder's side of the table — as an advisor, mastermind chair, and independent director.
 >
@@ -105,7 +105,7 @@ Cadence that fits a 0.5-FTE reality: one substantial LinkedIn post/essay per wee
 
 ## 7. Verified-facts appendix & open items
 
-**Verified from Todd's public profiles:** 30+ years experience; 10 startup/turnaround companies; $2B+ shareholder value; 5 acquired / 2 NASDAQ / 2 private; roles at Why.com (CEO), bConnected Software (CEO), Accupost (Chairman & President), Falcon Fulfillment (founder & CEO); Arilex Ventures Managing Partner, est. 2005, sectors health & wellness / healthcare tech / fintech; B.S. Finance, Penn State; Best Life Journey author; Health Profits Summit speaker; CEO coach.
+**Verified:** 40 years experience across 12 startup/turnaround companies (figures confirmed by Todd directly, Aug 2026; public profiles still say "30+ years / 10 companies" — update LinkedIn, Startups.com, Clarity.fm to match); $2B+ shareholder value; 5 acquired / 2 NASDAQ / 2 private; roles at Why.com (CEO), bConnected Software (CEO), Accupost (Chairman & President), Falcon Fulfillment (founder & CEO); Arilex Ventures Managing Partner, est. 2005, sectors health & wellness / healthcare tech / fintech; B.S. Finance, Penn State; Best Life Journey author; Health Profits Summit speaker; CEO coach.
 
 **Verified from current operations:** Mount Hydra (regenerative medicine), SCEQL Labs (Irvine, CA), 3D Exosomes; AI-agent-run operations; operating principles quoted on the page are Todd's own directives.
 
